@@ -1,0 +1,19 @@
+::ng-deep{
+    .swal2-timer-progress-bar {
+        background: #6259ca !important;
+    }
+    .swal2-styled{
+        font-size: 0.875rem !important;
+    }
+    .swal2-styled:focus{
+        box-shadow: none;
+    }
+    .swal2-title{
+        color: #334151;
+        font-weight: 500;
+        font-size: 24px;
+    }
+    .swal2-content{
+        font-size: 16px;
+    }
+}

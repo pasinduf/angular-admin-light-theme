@@ -1,0 +1,55 @@
+/* ###### 4.7 Quill ###### */
+
+.ql-wrapper-demo {
+  background-color: $white;
+
+  .ql-container {
+    height: 250px;
+  }
+
+  .ql-editor {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ql-wrapper-demo {
+    width: 70%;
+  }
+}
+
+.ql-scrolling-demo {
+  background-color: $white;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid #e8e8f7;
+  position: relative;
+
+  .ql-container {
+    border-width: 0;
+    height: auto;
+    min-height: 100%;
+    padding: 30px;
+
+    .ql-editor {
+      font-size: 16px;
+      overflow-y: visible;
+      color: $dark;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ql-scrolling-demo {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ql-scrolling-demo .ql-container {
+    padding: 50px;
+    padding-left: 35px;
+  }
+}

@@ -1,0 +1,303 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Avatars</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Elements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Avatars</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-9 col-lg-12">
+        <div class="card custom-card" id="sizes" #sizes>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Avatar Sizes</h6>
+                    <p class="text-muted card-sub-title">An avatar can have different sizes like larger and smaller
+                        avatar.</p>
+                </div>
+                <div class="">
+                    <div class="example">
+                        <div class="demo-avatar-group">
+                            <div class="main-img-user avatar-xs">
+                                <img alt="avatar" class="rounded-circle" src="../../assets/img/users/2.jpg">
+                            </div>
+                            <div class="main-img-user avatar-sm">
+                                <img alt="avatar" class="rounded-circle" src="../../assets/img/users/3.jpg">
+                            </div>
+
+                            <div class="main-img-user avatar-md">
+                                <img alt="avatar" class="rounded-circle" src="../../assets/img/users/5.jpg">
+                            </div>
+                            <div class="main-img-user avatar-lg">
+                                <img alt="avatar" class="rounded-circle" src="../../assets/img/users/6.jpg">
+                            </div>
+                            <div class="main-img-user avatar-xl d-none d-sm-block">
+                                <img alt="avatar" class="rounded-circle" src="../../assets/img/users/7.jpg">
+                            </div>
+                            <div class="main-img-user avatar-xxl d-none d-sm-block">
+                                <img alt="avatar" class="rounded-circle" src="../../assets/img/users/8.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="avatar1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="shapes" #shapes>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Avatar Shapes</h6>
+                    <p class="text-muted card-sub-title">An avatar can have different shapes like square and round,
+                        radius avatars.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="demo-avatar-group">
+                            <div class="main-img-user avatar-md">
+                                <img alt="avatar" class="rounded-circle" src="../../assets/img/users/4.jpg">
+                            </div>
+                            <div class="main-img-user avatar-md">
+                                <img alt="avatar" class="square" src="../../assets/img/users/5.jpg">
+                            </div>
+                            <div class="main-img-user avatar-md">
+                                <img alt="avatar" class="radius" src="../../assets/img/users/6.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="avatar2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="initials" #initials>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Initials Avatars</h6>
+                    <p class="text-muted card-sub-title">An avatar can have a temporary use of user's initial name while
+                        their photos are not yet available.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="demo-avatar-group avatar-list">
+                            <div class="avatar avatar-xs">
+                                A
+                            </div>
+                            <div class="avatar avatar-sm bg-secondary">
+                                U
+                            </div>
+                            <div class="avatar bg-info">
+                                C
+                            </div>
+                            <div class="avatar avatar-md bg-success">
+                                X
+                            </div>
+                            <div class="avatar avatar-lg bg-warning">
+                                E
+                            </div>
+                            <div class="avatar avatar-xl d-none d-sm-flex bg-danger">
+                                M
+                            </div>
+                            <div class="avatar avatar-xxl d-none d-sm-flex bg-pink">
+                                NB
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="avatar3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="status" #status>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Status Indicator</h6>
+                    <p class="text-muted card-sub-title">An avatar can have a status indicator to indicate users
+                        availability.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="demo-avatar-group">
+                            <div class="main-avatar avatar online">
+                                <img alt="avatar" class="rounded-circle avatar" src="../../assets/img/users/9.jpg">
+                            </div>
+                            <div class="main-avatar avatar-md offline">
+                                eb
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="avatar4">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-12 d-none d-xl-block custom-leftnav">
+        <div class="main-content-left-components">
+            <div class="card custom-card">
+                <div class="card-body component-item">
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(sizes)">Avatar Sizes</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(shapes)">Avatar Shapes</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(initials)">Avatar Initials</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(status)">Status Indicator
+                            Avatars</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-body user-card text-center">
+                    <div class="main-img-user avatar-lg online text-center">
+                        <img alt="avatar" class="rounded-circle" src="../../assets/img/users/5.jpg">
+                    </div>
+                    <div class="mt-2">
+                        <h5 class="mb-1">Reynante</h5>
+                        <p class="mb-1 tx-inverse">Web Developer</p>
+                        <span class="text-muted"><i class="far fa-check-circle text-success mr-1"></i>Verified</span>
+                    </div>
+                    <a href="javascript:;" class="btn ripple btn-primary btn-sm mt-3">View Profile</a>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-body user-card text-center">
+                    <div class="main-img-user avatar-lg online text-center">
+                        <img alt="avatar" class="rounded-circle" src="../../assets/img/users/4.jpg">
+                    </div>
+                    <div class="mt-2">
+                        <h5 class="mb-1">Joyce Chua</h5>
+                        <p class="mb-1 tx-inverse">Team Leader</p>
+                        <span class="text-muted"><i class="far fa-check-circle text-success mr-1"></i>Verified</span>
+                    </div>
+                    <a href="javascript:;" class="btn ripple btn-secondary btn-sm mt-3">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

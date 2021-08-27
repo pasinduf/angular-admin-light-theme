@@ -1,0 +1,29 @@
+::ng-deep {
+  .carousel.slide {
+    outline: 0;
+  }
+  .owl-theme .owl-nav [class*="owl-"] {
+    display: none;
+  }
+  .horizontalmenu .owl-carousel.owl-drag .owl-item{
+    width: 268.5px !important;
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 1000 ms;
+  animation-duration: 1000 ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+
+.col-lg-12.col-md-12 .customCarousel{
+  height: 150px;
+  overflow: hidden;
+}
+
+.apexcharts-pie{
+  transform: translate(-40px, 0);
+}

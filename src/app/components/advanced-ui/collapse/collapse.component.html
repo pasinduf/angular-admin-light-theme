@@ -1,0 +1,82 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Collapse</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Advanced UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Collapse</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+              <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+              <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+              <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="sidemenu-height">
+    <div class="row row-sm">
+        <div class="col-lg-12 col-md-12">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Basic Example</h6>
+                        <p class="text-muted card-sub-title">Click the buttons below to show and hide another element via class changes</p>
+                    </div>
+                    <div>
+                        <a class="btn ripple btn-primary" href="javascript:;" role="button" (click)="toggle()">Toggle Content</a>
+                        <div class="mg-t-5" id="collapseExample" *ngIf="isCollapsed">
+                            <div class="card card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Multiple Targets</h6>
+                        <p class="text-muted card-sub-title">A button or link can show/hide (collapse) multiple elements by referencing them with a *ngIf condition.</p>
+                    </div>
+                    <div>
+                        <div class="btn btn-list">
+                            <a class="btn ripple btn-primary" href="javascript:;" role="button" (click)="first()">Toggle First Content</a>
+                            <a class="btn ripple btn-secondary" href="javascript:;" role="button" (click)="second()">Toggle Second Content</a>
+                            <a class="btn ripple btn-success" href="javascript:;" role="button" (click)="both()">Toggle Both Contents</a>
+                        </div>
+                        <div class="row row-sm">
+                            <div class="col">
+                                <div class="multi-collapse mt-2" >
+                                    <div class="card card-body" *ngIf="isFirstCollapsed">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="multi-collapse mt-2" >
+                                    <div class="card card-body" *ngIf="isSecondCollapsed">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

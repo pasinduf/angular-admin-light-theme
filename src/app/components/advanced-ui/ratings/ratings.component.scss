@@ -1,0 +1,51 @@
+.fa.fa-heart,
+.fa.fa-star {
+    letter-spacing: 5px;
+}
+
+@media (max-width:340px) {
+    .d-inline-flex.rating-size, .d-inline-flex.ng-rating{
+        width: 270px;
+        overflow: hidden;
+        span{
+            width: 24px ;
+        }
+    }
+    
+}
+::ng-deep {
+    .ng-rating:focus,
+    .rating-size:focus {
+        outline: 0;
+    }
+    .star {
+        position: relative;
+        display: inline-block;
+        font-size: 2rem;
+        color: #f0f0f2;
+    }
+    .full {
+        color:#ff9b21;
+    }
+    .half {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        color:#ff9b21;
+    }
+    .heartHalf {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        color: #f16d75;
+    }
+    .filled {
+        color:#ff9b21;
+    }
+    .bad {
+        color: #deb0b0;
+    }
+    .filled.bad {
+        color: #f16d75;
+    }
+}

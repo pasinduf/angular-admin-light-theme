@@ -1,0 +1,162 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Crypto-Market</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Crypto Currencies</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Crypto-Market</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- row -->
+<div class="row row-sm">
+    <div class="col-lg-6 col-xl-6 col-xxl-6 col-md-6 col-12">
+        <div class="card custom-card">
+            <div class="card-body pb-3">
+                <h5 class="tx-14">BTC / USD</h5>
+                <div class="d-flex">
+                    <div class="">
+                        <h4 class="mb-2">34.4324 <span class="text-muted tx-12">$29.42</span></h4>
+                        <div class="d-flex text-muted tx-13"><span
+                                class="text-danger mr-2 font-weight-bold">-0.22%</span> Volume - 76,434.57 USDT</div>
+                    </div>
+                    <div class="d-flex ml-auto float-right">
+                        <div class="wd-50p wd-100-f ml-auto float-right">
+                        <apx-chart [chart]="lineApexChart.chart" [series]="ApexData1.series"
+                            [colors]="lineApexChart.colors" [stroke]="lineApexChart.stroke"
+                            [labels]="lineApexChart.labels">
+                        </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-6 col-xxl-6 col-md-6 col-12">
+        <div class="card custom-card">
+            <div class="card-body pb-3">
+                <h5 class="tx-14">ETH / USD</h5>
+                <div class="d-flex">
+                    <div class="">
+                        <h4 class="mb-2">29.4124 <span class="text-muted tx-12">$23.15</span></h4>
+                        <div class="d-flex text-muted tx-13"><span
+                                class="text-success mr-2 font-weight-bold">+0.23%</span> Volume - 23,346.56 USDT</div>
+                    </div>
+                    <div class="d-flex ml-auto float-right">
+                        <div class="wd-50p wd-100-f ml-auto float-right">
+                        <apx-chart [chart]="lineApexChart.chart" [series]="ApexData2.series"
+                            [colors]="lineApexChart.colors" [stroke]="lineApexChart.stroke"
+                            [labels]="lineApexChart.labels">
+                        </apx-chart>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-6 col-xxl-6 col-md-6 col-12">
+        <div class="card custom-card">
+            <div class="card-body pb-3">
+                <h5 class="tx-14">XRP / USD</h5>
+                <div class="d-flex">
+                    <div class="">
+                        <h4 class="mb-2">34.5674 <span class="text-muted tx-12">$45.24</span></h4>
+                        <div class="d-flex text-muted tx-13"><span
+                                class="text-danger mr-2 font-weight-bold">-0.42%</span> Volume - 56,456.12 USDT</div>
+                    </div>
+                    <div class="d-flex ml-auto float-right">
+                        <div class="wd-50p wd-100-f ml-auto float-right"> 
+                        <apx-chart [chart]="lineApexChart.chart" [series]="ApexData3.series"
+                            [colors]="lineApexChart.colors" [stroke]="lineApexChart.stroke"
+                            [labels]="lineApexChart.labels">
+                        </apx-chart>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-xl-6 col-xxl-6 col-md-6 col-12">
+        <div class="card custom-card">
+            <div class="card-body pb-3">
+                <h5 class="tx-14">LTC / USD</h5>
+                <div class="d-flex">
+                    <div class="">
+                        <h4 class="mb-2">45.4542 <span class="text-muted tx-12">$63.34</span></h4>
+                        <div class="d-flex text-muted tx-13"><span
+                                class="text-success mr-2 font-weight-bold">-0.12%</span> Volume - 34,462.57 USDT</div>
+                    </div>
+                    <div class="d-flex ml-auto float-right">
+                       <div class="wd-50p wd-100-f ml-auto float-right"> 
+                        <apx-chart [chart]="lineApexChart.chart" [series]="ApexData4.series"
+                            [colors]="lineApexChart.colors" [stroke]="lineApexChart.stroke"
+                            [labels]="lineApexChart.labels">
+                        </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End row -->
+
+<!-- row opened -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-header border-bottom-0">
+                <label class="main-content-label my-auto">Crypt Marketing Values</label>
+            </div>
+            <div class="card-body">
+                <div class="">
+                    <div class="table-responsive-sm">
+                        <table class="table text-nowrap">
+                            <thead class="border-top">
+                                <tr>
+                                    <th class="bg-transparent">No</th>
+                                    <th class="bg-transparent">Name</th>
+                                    <th class="bg-transparent">Last Price</th>
+                                    <th class="bg-transparent">Market Cap</th>
+                                    <th class="bg-transparent">Change(24h)</th>
+                                    <th class="bg-transparent"></th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let cryptoData of cryptoMarketData">
+                                <tr class="border-bottom">
+                                    <td>{{cryptoData.id}}</td>
+                                    <td><img src="{{cryptoData.img}}" class="wd-30 ht-30 mr-3"
+                                            alt="">{{cryptoData.name}} <b>{{cryptoData.coinName}}</b></td>
+                                    <td>{{cryptoData.lastPrice | currency}}</td>
+                                    <td>$ {{cryptoData.marketPrice | currency:' ':'symbol':'3.0-0' }}</td>
+                                    <td>
+                                        <span
+                                            [ngClass]=" cryptoData.changes > 0  ? 'text-success' : 'text-danger' ">{{cryptoData.changes}}%</span>
+                                    </td>
+                                    <td><a href="javascript:;" class="btn btn-outline-primary btn-sm">Trade</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Row End -->

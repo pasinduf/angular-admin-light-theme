@@ -1,0 +1,53 @@
+/* ###### Timeline  ###### */
+
+.latest-timeline1 li {
+  position: relative;
+}
+
+.latest-timeline.latest-timeline1-icon ul.timeline > li:before {
+  display: none;
+}
+
+.latest-timeline1-icon {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 7px;
+  line-height: 2rem;
+  text-align: center;
+  left: 0;
+  z-index: 1;
+  color: $white;
+  font-weight: 500;
+  left: -38px;
+}
+
+/*latetes news timeline */
+
+.latest-timeline ul.timeline {
+  list-style-type: none;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    background: #eff0f6;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    width: 3px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  > li {
+    margin: 20px 0;
+    padding-left: 1rem;
+  }
+}
+
+.latest-timeline1 a {
+  color: #181727;
+  font-weight: 600;
+}
+
+/* ###### Timeline  ###### */

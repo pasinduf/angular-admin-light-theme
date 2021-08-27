@@ -1,0 +1,263 @@
+/* ###### Backgrounds ###### */
+
+.align-baseline {
+  vertical-align: baseline !important;
+}
+
+.align-top {
+  vertical-align: top !important;
+}
+
+.align-middle {
+  vertical-align: middle !important;
+}
+
+.align-bottom {
+  vertical-align: bottom !important;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.align-text-top {
+  vertical-align: text-top !important;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+a.bg-secondary {
+  &:hover, &:focus {
+    background-color: $secondary !important;
+  }
+}
+
+button.bg-secondary {
+  &:hover, &:focus {
+    background-color: $secondary !important;
+  }
+}
+
+.bg-success {
+  background-color: $success !important;
+}
+
+a.bg-success {
+  &:hover, &:focus {
+    background-color: #37ce4f !important;
+  }
+}
+
+button.bg-success {
+  &:hover, &:focus {
+    background-color: #37ce4f !important;
+  }
+}
+
+.bg-info {
+  background-color: $info !important;
+}
+
+a.bg-info {
+  &:hover, &:focus {
+    background-color: #06aff1 !important;
+  }
+}
+
+button.bg-info {
+  &:hover, &:focus {
+    background-color: #06aff1 !important;
+  }
+}
+
+.bg-warning {
+  background-color: $warning  !important;
+}
+
+a.bg-warning {
+  &:hover, &:focus {
+    background-color: #d39e00 !important;
+  }
+}
+
+button.bg-warning {
+  &:hover, &:focus {
+    background-color: #d39e00 !important;
+  }
+}
+
+.bg-danger {
+  background-color: #f16d75 !important;
+}
+
+a.bg-danger {
+  &:hover, &:focus {
+    background-color: #f16d75 !important;
+  }
+}
+
+button.bg-danger {
+  &:hover, &:focus {
+    background-color: #f16d75 !important;
+  }
+}
+
+.bg-light {
+  background-color: #f4f4fd  !important;
+}
+
+a.bg-light {
+  &:hover, &:focus {
+    background-color: #dbe0ea !important;
+  }
+}
+
+button.bg-light {
+  &:hover, &:focus {
+    background-color: #dbe0ea !important;
+  }
+}
+
+.bg-dark {
+  background-color: $dark !important;
+}
+
+a.bg-dark {
+  &:hover, &:focus {
+    background-color: #131212 !important;
+  }
+}
+
+button.bg-dark {
+  &:hover, &:focus {
+    background-color: #131212 !important;
+  }
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(to right, #744dfe 0%, #71a7f5 100%);
+}
+
+.bg-success-gradient {
+  background: linear-gradient(to right, #45e1d4 0%, #129ed3 100%);
+}
+
+.bg-warning-gradient {
+  background: linear-gradient(to right, #f8c888 0%, #f45c6b 100%);
+}
+
+.bg-info-gradient {
+  background: linear-gradient(to right, #9271fe 0%, #fb5ea3 100%);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-white-1 {
+  background-color: $white-1;
+}
+
+.bg-white-2 {
+  background-color: $white-2;
+}
+
+.bg-white-3 {
+  background-color: $white-3;
+}
+
+.bg-white-4 {
+  background-color: $white-4;
+}
+
+.bg-white-5 {
+  background-color: $white-5;
+}
+
+.bg-white-6 {
+  background-color: $white-6;
+}
+
+.bg-white-7 {
+  background-color: $white-7;
+}
+
+.bg-white-8 {
+  background-color: $white-8;
+}
+
+.bg-white-9 {
+  background-color: $white-9;
+}
+
+.bg-black-1 {
+  background-color: $black-1;
+}
+
+.bg-black-2 {
+  background-color: $black-2;
+}
+
+.bg-black-3 {
+  background-color: $black-3;
+}
+
+.bg-black-4 {
+  background-color: $black-4;
+}
+
+.bg-black-5 {
+  background-color: $black-5;
+}
+
+.bg-black-6 {
+  background-color: $black-6;
+}
+
+.bg-black-7 {
+  background-color: $black-7;
+}
+
+.bg-black-8 {
+  background-color: $black-8;
+}
+
+.bg-black-9 {
+  background-color: $black-9;
+}
+
+.bg-indigo {
+  background-color: #4b0082;
+}
+
+.bg-purple {
+  background-color: #6f42c1;
+}
+
+.bg-pink {
+  background-color: #f10075;
+}
+
+.bg-orange {
+  background-color: #fd7e14;
+}
+
+.bg-teal {
+  background-color: #00cccc;
+}
+
+.bg-purple-dark {
+  background-color: #59339d;
+}
+
+/* ###### Backgrounds ###### */

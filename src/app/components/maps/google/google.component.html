@@ -1,0 +1,273 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Google Maps</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Maps</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Google Maps</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+              <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+              <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+              <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Map</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the basic google map.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m1" [longitude]="lng_m1" [zoom]="zoom_m1" [scrollwheel]="false"
+                            [disableDoubleClickZoom]="true" [mapDraggable]="false" [zoomControl]="false"
+                            [mapTypeControl]="true">
+                            <agm-marker>
+                                <agm-info-window [disableAutoPan]="true">
+                                    Hi, this is the content of the <strong>info window</strong>
+                                </agm-info-window>
+                            </agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Google Map With Marker</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the map at a specified location with marker.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m2" [longitude]="lng_m2" [zoom]="zoom_m2" [disableDefaultUI]="false"
+                            [zoomControl]="false" (mapClick)="mapClicked($event)">
+                            <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
+                                [label]="m.label" [draggable]="false">
+                                <agm-info-window>
+                                    <strong>InfoWindow content</strong>
+                                </agm-info-window>
+                            </agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">MultiLanguage Map</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the map with MultiLanguage Map.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m3" [longitude]="lng_m3" [zoom]="zoom_m3">
+                            <agm-marker>
+                                <agm-info-window [disableAutoPan]="true">
+                                    Hi, this is the content of the <strong>info window</strong>
+                                </agm-info-window>
+                            </agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Tertain</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the map with Tertain.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m4" [longitude]="lng_m4" [zoom]=zoom_m4 [mapTypeControl]="true">
+                            <agm-marker>
+                                <agm-info-window [disableAutoPan]="true">
+                                    Hi, this is the content of the <strong>info window</strong>
+                                </agm-info-window>
+                            </agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Zoom into Bound</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the map Zoom into Bound.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m5" [longitude]="lng_m5" [zoom]="zoom_m5">
+                            <agm-marker>
+                                <agm-info-window [disableAutoPan]="true">
+                                    Hi, this is the content of the <strong>info window</strong>
+                                </agm-info-window>
+                                <agm-circle [latitude]="lat_m5_c1" [longitude]="lng_m5_c1" [radius]="500000"
+                                    [editable]="false" [fillColor]="'blue'" [circleDraggable]="false"
+                                    [strokeColor]="'blue'">
+                                </agm-circle>
+                                <agm-circle [latitude]="lat_m5_c2" [longitude]="lng_m5_c2" [radius]="180000"
+                                    [editable]="false" [fillColor]="'red'" [circleDraggable]="false"
+                                    [strokeColor]="'blue'">
+                                </agm-circle>
+                            </agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">FullScreen Map</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the FullScreen Map.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m6" [longitude]="lng_m6" [zoom]="zoom_m6" [fullscreenControl]="true">
+                            <agm-polygon [paths]="paths_m6">
+                            </agm-polygon>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Draggable Marker</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the Draggable Marker.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m7" [longitude]="lng_m7" [zoom]="zoom_m7" [disableDefaultUI]="false"
+                            [zoomControl]="false" (mapClick)="mapClicked($event)">
+                            <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
+                                [label]="m.label" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
+
+                                <agm-info-window>
+                                    <strong>InfoWindow content</strong>
+                                </agm-info-window>
+
+                            </agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Polyline</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the Polyline.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m8" [longitude]="lng_m8" [zoom]="zoom_m8">
+                            <agm-polyline [strokeColor]="strokecolor_m8" [strokeWeight]="strokewidth_m8">
+                                <agm-polyline-point [latitude]="lat_m8_A" [longitude]="lng_m8_A">
+                                </agm-polyline-point>
+                                <agm-polyline-point [latitude]="lat_m8_B" [longitude]="lng_m8_B">
+                                </agm-polyline-point>
+                                <agm-polyline-point [latitude]="lat_m8_c" [longitude]="lng_m8_c">
+                                </agm-polyline-point>
+                                <agm-polyline-point [latitude]="lat_m8_d" [longitude]="lng_m8_d">
+                                </agm-polyline-point>
+                            </agm-polyline>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Polygon</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the Polygon.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m9" [longitude]="lng_m9" [zoom]="zoom_m9" [panControl]="true"
+                            [rotateControl]="true">
+                            <agm-polygon [paths]="paths_m9" [fillColor]="fillcolor_m9" [strokeColor]="strokeColor_m9"
+                                [strokeWeight]="pstrokeweight_m9" [fillOpacity]="fillOpacity_m9">
+                            </agm-polygon>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card custom-card" id="map">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Polygon Draggable</h6>
+                    <p class="text-muted card-sub-title">Below is an example of displaying the Polygon on the map draggable.</p>
+                </div>
+                <div class="ht-500">
+                    <div class="map-js-height">
+                        <agm-map [latitude]="lat_m10" [longitude]="lng_m10" [zoom]="zoom_m10">
+                            <agm-marker>
+                                <agm-info-window [disableAutoPan]="true">
+                                    Hi, this is the content of the <strong>info window</strong>
+                                </agm-info-window>
+                                <agm-circle [latitude]="lat_m10_c1" [longitude]="lng_m10_c1" [radius]="300000"
+                                    [editable]="false" [fillColor]="'red'" [circleDraggable]="true"
+                                    [strokeColor]="'blue'">
+                                </agm-circle>
+                            </agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!-- /Row -->

@@ -1,0 +1,370 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Media Objects</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Elements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Media Objects</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-9 col-lg-12">
+        <div class="card custom-card" id="basic" #basic>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Example</h6>
+                    <p class="text-muted card-sub-title">The media object helps build complex and repetitive components
+                        where some media is positioned alongside content that doesn’t wrap around said media. Plus, it
+                        does this with only two required classes thanks to flexbox.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media d-block d-sm-flex">
+                            <img alt="img" class="wd-100p wd-sm-200  mg-sm-r-20 mg-b-20 mg-sm-b-0"
+                                src="../../assets/img/media/1.jpg">
+                            <div class="media-body">
+                                <h5>Media heading</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
+                                felis in faucibus.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="nesting" #nesting>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Nesting</h6>
+                    <p class="text-muted card-sub-title">Media objects can be infinitely nested, though we suggest you
+                        stop at some point. Place nested <code>.media</code> within the <code>.media-body</code> of a
+                        parent media object.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media d-block d-sm-flex">
+                            <img alt="img" class="wd-100p wd-sm-100  mg-sm-r-20 mg-b-20 mg-sm-b-0"
+                                src="../../assets/img/media/2.jpg">
+                            <div class="media-body">
+                                <h5>Media heading</h5>
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                    Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in
+                                    faucibus.</p>
+                                <div class="media d-block d-sm-flex mg-t-25">
+                                    <img alt="img" class="wd-100p wd-sm-100  mg-sm-r-20 mg-b-20 mg-sm-b-0"
+                                        src="../../assets/img/media/3.jpg">
+                                    <div class="media-body">
+                                        <h5>Media heading</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel
+                                        metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate
+                                        at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                                        Donec lacinia congue felis in faucibus.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="align" #align>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Alignment</h6>
+                    <p class="text-muted card-sub-title">Media in a media object can be aligned with flexbox utilities
+                        to the top (default), middle, or end of your .media-body content.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media d-block d-sm-flex">
+                            <img alt="img" class="wd-100p wd-sm-100  mg-sm-r-20 mg-b-20 mg-sm-b-0 align-self-center"
+                                src="../../assets/img/media/4.jpg">
+                            <div class="media-body">
+                                <h5>Media heading</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
+                                felis in faucibus. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
+                                felis in faucibus.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="list" #list>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Media List</h6>
+                    <p class="text-muted card-sub-title">Because the media object has so few structural requirements,
+                        you can also use these classes on list HTML elements.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ul class="list-unstyled">
+                            <li class="media d-block d-sm-flex">
+                                <img alt="img" class="wd-100p wd-sm-100  mg-sm-r-20 mg-b-20 mg-sm-b-0"
+                                    src="../../assets/img/media/6.jpg">
+                                <div class="media-body">
+                                    <h5>Media heading</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                    scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                    congue felis in faucibus.
+                                </div>
+                            </li>
+                            <li class="media d-block d-sm-flex mg-t-25">
+                                <img alt="img" class="wd-100p wd-sm-100  mg-sm-r-20 mg-b-20 mg-sm-b-0"
+                                    src="../../assets/img/media/7.jpg">
+                                <div class="media-body">
+                                    <h5>Media heading</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                    scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                    congue felis in faucibus.
+                                </div>
+                            </li>
+                            <li class="media d-block d-sm-flex mg-t-25">
+                                <img alt="img" class="wd-100p wd-sm-100  mg-sm-r-20 mg-b-20 mg-sm-b-0"
+                                    src="../../assets/img/media/8.jpg">
+                                <div class="media-body">
+                                    <h5>Media heading</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                    scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                    viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                    congue felis in faucibus.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media5">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="order" #order>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Order</h6>
+                    <p class="text-muted card-sub-title">Change the order of content in media objects by modifying the
+                        HTML itself, or by adding some custom flexbox CSS to set the order property (to an integer of
+                        your choosing).</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="media d-block d-sm-flex">
+                            <div class="media-body">
+                                <h5>Media heading</h5>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
+                                felis in faucibus.
+                            </div><img alt="img" class="wd-100p wd-sm-200  mg-sm-l-20 mg-t-20 mg-sm-t-0"
+                                src="../../assets/img/media/5.jpg">
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="media4">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-12 d-none d-xl-block custom-leftnav">
+        <div class="main-content-left-components">
+            <div class="card custom-card">
+                <div class="card-body component-item">
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(basic)">Basic Example</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(nesting)">Nesting</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(align)">Alignment</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(order)">Order</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(list)">Media List</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-body user-card text-center">
+                    <div class="main-img-user avatar-lg online text-center">
+                        <img alt="avatar" class="-circle" src="../../assets/img/users/5.jpg">
+                    </div>
+                    <div class="mt-2">
+                        <h5 class="mb-1">Reynante</h5>
+                        <p class="mb-1 tx-inverse">Web Developer</p>
+                        <span class="text-muted"><i class="far fa-check-circle text-success mr-1"></i>Verified</span>
+                    </div>
+                    <a href="javascript:;" class="btn ripple btn-primary btn-sm mt-3">View Profile</a>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-body user-card text-center">
+                    <div class="main-img-user avatar-lg online text-center">
+                        <img alt="avatar" class="-circle" src="../../assets/img/users/4.jpg">
+                    </div>
+                    <div class="mt-2">
+                        <h5 class="mb-1">Joyce Chua</h5>
+                        <p class="mb-1 tx-inverse">Team Leader</p>
+                        <span class="text-muted"><i class="far fa-check-circle text-success mr-1"></i>Verified</span>
+                    </div>
+                    <a href="javascript:;" class="btn ripple btn-secondary btn-sm mt-3">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

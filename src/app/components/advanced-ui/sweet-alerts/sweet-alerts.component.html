@@ -1,0 +1,140 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Sweet Alert</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Advanced UI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sweet Alert</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+              <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+              <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+              <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="sidemenu-height">
+    <div class="row row-sm ">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card custom-card text-center">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Basic Alert</h6>
+                        <p class="text-muted card-sub-title">A Basic Message</p>
+                    </div>
+                    <button type="button" class="btn ripple btn-primary" id='swal-basic' (click)="basicAlert()">
+                        Click me !
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card custom-card text-center">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Title alert</h6>
+                        <p class="text-muted card-sub-title">A title with a text under</p>
+                    </div>
+                    <button type="button" class="btn ripple btn-primary" id='swal-title' (click)="titleAlert()">
+                        Click me !
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card custom-card text-center">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Success alert</h6>
+                        <p class="text-muted card-sub-title">A Success Message</p>
+                    </div>
+                    <button type="button" class="btn ripple btn-primary" id='swal-success' (click)="successAlert()">
+                        Click me !
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card custom-card text-center">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Warning alert</h6>
+                        <p class="text-muted card-sub-title">A warning message</p>
+                    </div>
+                    <button type="button" class="btn ripple btn-primary" id='swal-warning' (click)="warningAlert()">
+                        Click me !
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Row -->
+
+    <!-- Row -->
+    <div class="row row-sm ">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card custom-card text-center">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Passing a parameter alert</h6>
+                        <p class="text-muted card-sub-title">By passing a parameter</p>
+                    </div>
+                    <button type="button" class="btn ripple btn-primary" id='swal-parameter' (click)="parameterAlert()">
+                        Click me !
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card custom-card text-center">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Image alert</h6>
+                        <p class="text-muted card-sub-title">A message with custom Image</p>
+                    </div>
+                    <button type="button" class="btn ripple btn-primary" id='swal-image' (click)="imageAlert()">
+                        Click me !
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card custom-card text-center">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Timer alert</h6>
+                        <p class="text-muted card-sub-title">A message with auto close timer</p>
+                    </div>
+                    <button type="button" class="btn ripple btn-primary" id='swal-timer' (click)="timerAlert()">
+                        Click me !
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card custom-card text-center">
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-1">Animation Alert</h6>
+                        <p class="text-muted card-sub-title">Custom animation with Animation.css</p>
+                    </div>
+                    <button type="button" class="btn ripple btn-primary" id='swal-ajax' (click)="animationAlert()">
+                        Click me !
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Row -->
+</div>

@@ -1,0 +1,378 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Account</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Ecommerce</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Account</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+              <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+              <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+              <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-3 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h3 class="main-content-label">My Account</h3>
+            </div>
+            <div class="card-body text-center item-user">
+                <div class="profile-pic">
+                    <div class="profile-pic-img">
+                        <span class="bg-success dots" data-toggle="tooltip" data-placement="top" title="online"></span>
+                        <img src="../../assets/img/users/1.jpg" class="rounded-circle" alt="user">
+                    </div>
+                    <a href="javascript:;" class="text-dark"><h5 class="mt-3 mb-0 font-weight-semibold">Sonia Taylor</h5></a>
+                </div>
+            </div>
+            <ul ngbNav #nav="ngbNav" class="nav-tabs mb-0 item1-links" [(activeId)]="active">
+                <li [ngbNavItem]="1">
+                    <a href="javascript:;" ngbNavLink><i class="ti-user icon1"></i> My orders</a>
+                    <ng-template ngbNavContent>
+                        <div class="d-flex mb-4">
+                            <label class="main-content-label my-auto">All orders</label>
+                            <h6 class="mb-0 ml-auto"><button class="btn btn-success  float-right"><i class=""></i>Invoice</button></h6>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table border text-md-nowrap text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Photo</th>
+                                        <th>Product</th>
+                                        <th>Qty</th>
+                                        <th>Price</th>
+                                        <th class="text-right">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-bottom">
+                                        <th scope="row">#34350</th>
+                                        <td><img src="../../assets/img/pngs/17.png" class="img-sm product-image border" alt="product-img"></td>
+                                        <td>Plastic Outdoor Chair</td>
+                                        <td>1</td>
+                                        <td>$200</td>
+                                        <td class="text-right">$200</td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <th scope="row">#34351</th>
+                                        <td><img src="../../assets/img/pngs/18.png" class="img-sm product-image border" alt="product-img"></td>
+                                        <td>Black Digital smart watch</td>
+                                        <td>2</td>
+                                        <td>$500</td>
+                                        <td class="text-right">$500</td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <th scope="row">#34352</th>
+                                        <td><img src="../../assets/img/pngs/15.png" class="img-sm product-image border" alt="product-img"></td>
+                                        <td>Women Pink Heels Sandal</td>
+                                        <td>2</td>
+                                        <td>$400</td>
+                                        <td class="text-right">$400</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">#34353</th>
+                                        <td><img src="../../assets/img/pngs/19.png" class="img-sm product-image border" alt="product-img"></td>
+                                        <td>Apple iPhone(Black, 128 GB)</td>
+                                        <td>2</td>
+                                        <td>$800</td>
+                                        <td class="text-right">$800</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                    <a href="javascript:;" ngbNavLink><i class="ti-save-alt icon1"></i> My Address</a>
+                    <ng-template ngbNavContent>
+                        <button type="button" class="btn btn-round btn-success mb-3"><i class="fe fe-plus-circle  mr-2"></i>Add New Address</button>
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="card custom-card border mb-lg-0">
+                                    <div class="card-header pb-3">
+                                        <h6 class="mb-0"><i class="ti-home mr-2"></i>Default Address</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>+91 08023310451</p>
+                                        <p>3-15/10/403 Newark, Street no 5, Next To Pizza Hut,  Bangalore,  Karnataka, 560003, India.</p>
+                                        <p class="mb-0">soniataylor344@example.com</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-block btn-primary mb-1"><i class="ti ti-pencil"></i></button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-block btn-outline-primary mb-1"><i class="ti ti-trash"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="card custom-card border mb-0">
+                                    <div class="card-header pb-3">
+                                        <h6 class="mb-0"><i class="ti-home mr-2"></i>Office Address</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>+91 02228346362</p>
+                                        <p>2-15A-12  , Steriling Chambers, S Radhakrishnana Marg, J B Nagar, Andheri (west), Mumbai , Maharashtra</p>
+                                        <p class="mb-0">john54@gmail.com</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-block btn-primary mb-1"><i class="ti ti-pencil"></i></button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-block btn-outline-primary mb-1"><i class="ti ti-trash"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                    <a href="javascript:;" ngbNavLink><i class="ti-truck icon1"></i> Track Order</a>
+                    <ng-template ngbNavContent>
+                        <h6 class="mb-4">ORDER ID: <b>OD45345345435</b></h6>
+                        <div class="card">
+                            <div class="card-body row">
+                                <div class="col-sm-12 col-md-3 mb-3 mb-md-0"> <strong>Estimated Delivery time:</strong> <br>29 Dec 2020 </div>
+                                <div class="col-sm-12 col-md-3 mb-3 mb-md-0"> <strong>Shipping BY:</strong> <br> BLUEDART, | <i class="fa fa-phone"></i> +1598675986 </div>
+                                <div class="col-sm-12 col-md-3 mb-3 mb-md-"> <strong>Status:</strong> <br> Picked by the courier </div>
+                                <div class="col-sm-12 col-md-3"> <strong>Tracking #:</strong> <br> BD045903594656 </div>
+                            </div>
+                        </div>
+                        <div class="track mb-5">
+                            <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text d-none d-md-block">Order confirmed</span> </div>
+                            <div class="step active"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text d-none d-md-block"> Picked by courier</span> </div>
+                            <div class="step"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text d-none d-md-block"> On the way </span> </div>
+                            <div class="step"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text d-none d-md-block">Ready for pickup</span> </div>
+                        </div>
+                        <br>
+                        <div class="row mt-3">
+                            <div class="col-xl-4">
+                                <figure class="itemside mb-3">
+                                    <div class="aside"><img src="../../assets/img/pngs/19.png" class="img-sm product-image border" alt="product-img"></div>
+                                    <figcaption class="info align-self-center">
+                                        <p class="title mb-1">Apple iPhone(Black, 128 GB) <br> 8GB RAM</p> <span class="text-muted">$950 </span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xl-4">
+                                <figure class="itemside mb-3">
+                                    <div class="aside"><img src="../../assets/img/pngs/16.png" class="img-sm product-image border" alt="product-img"></div>
+                                    <figcaption class="info align-self-center">
+                                        <p class="title mb-1">Designer Hand Decorative <br> flower Pot </p><span class="text-muted">$850 </span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xl-4">
+                                <figure class="itemside mb-3">
+                                    <div class="aside"><img src="../../assets/img/pngs/14.png" class="img-sm product-image border" alt="product-img"></div>
+                                    <figcaption class="info align-self-center">
+                                        <p class="title mb-1">Regular waterproof <br>(24 L) Backpack</p> <span class="text-muted">$650 </span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="4">
+                    <a href="javascript:;" ngbNavLink><i class="ti-heart icon1"></i> Wishlist</a>
+                    <ng-template ngbNavContent>
+                        <div class="d-flex mb-4">
+                            <label class="main-content-label my-auto">Wishlist</label>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table border text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Photo</th>
+                                        <th>Product</th>
+                                        <th>Qty</th>
+                                        <th>Price</th>
+                                        <th>Total</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td><img src="../../assets/img/pngs/14.png" class="img-sm product-image border" alt="product-img"></td>
+                                        <td>Regular waterproof (24 L) Backpack</td>
+                                        <td>
+                                            <div class="form-group mb-0">
+                                                <input type="number" class="form-control cart-qty" name="cartQty1" id="cartQty1" value="1">
+                                            </div>
+                                        </td>
+                                        <td>$10</td>
+                                        <td>$500</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary mb-1 mr-1"><i class="ti-shopping-cart mr-2"></i>Move to cart</button>
+                                            <button type="button" class="btn btn-danger mb-1"><i class="ti-trash mr-2"></i>Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td><img src="../../assets/img/pngs/16.png" class="img-sm product-image border" alt="product-img"></td>
+                                        <td>Designer Hand Decorative flower Pot</td>
+                                        <td>
+                                            <div class="form-group mb-0">
+                                                <input type="number" class="form-control cart-qty" name="cartQty2" id="cartQty2" value="1">
+                                            </div>
+                                        </td>
+                                        <td>$20</td>
+                                        <td>$200</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary mb-1 mr-1"><i class="ti-shopping-cart mr-2"></i>Move to cart</button>
+                                            <button type="button" class="btn btn-danger mb-1"><i class="ti-trash mr-2"></i>Remove</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td><img src="../../assets/img/pngs/19.png" class="img-sm product-image border" alt="product-img"></td>
+                                        <td>Apple iPhone(Black, 128 GB)  8GB RAM</td>
+                                        <td>
+                                            <div class="form-group mb-0">
+                                                <input type="number" class="form-control cart-qty" name="cartQty3" id="cartQty3" value="1">
+                                            </div>
+                                        </td>
+                                        <td>$30</td>
+                                        <td>$300</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary mb-1 mr-1"><i class="ti-shopping-cart mr-2"></i>Move to cart</button>
+                                            <button type="button" class="btn btn-danger mb-1"><i class="ti-trash mr-2"></i>Remove</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="5">
+                    <a href="javascript:;" ngbNavLink><i class="ti-wallet icon1"></i> Wallet</a>
+                    <ng-template ngbNavContent>
+                        <div class="border p-4 text-center">
+                            <span class="text-uppercase tx-14 mt-4 text-muted">Available</span>
+                            <h1 class="my-3">$245465</h1>
+                            <a href="javascript:;" class="btn btn-primary"><i class="fe fe-plus mr-2"></i>Add Money</a>
+                        </div>
+                        <ul class="list-group tx-13">
+                            <li class="list-group-item border-top-0 pd-x-0 d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span class="crypto-icon bg-primary-transparent mr-3"><i class="fe fe-arrow-down-left text-primary"></i></span>
+                                    <span class="my-auto font-weight-semibold tx-15">Received</span>
+                                </div>
+                                <span class="font-weight-semibold my-auto text-success tx-15">+0.00004564</span>
+                            </li>
+                            <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span class="crypto-icon bg-primary-transparent mr-3"><i class="fe fe-arrow-up-right text-primary"></i></span>
+                                    <span class="my-auto font-weight-semibold tx-15">Sent</span>
+                                </div>
+                                <span class="font-weight-semibold my-auto text-danger tx-15">-0.03445436</span>
+                            </li>
+                            <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span class="crypto-icon bg-primary-transparent mr-3"><i class="fe fe-arrow-down-left text-primary"></i></span>
+                                    <span class="my-auto font-weight-semibold tx-15">Received</span>
+                                </div>
+                                <span class="font-weight-semibold my-auto text-success tx-15">+4.2543</span>
+                            </li>
+                            <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span class="crypto-icon bg-primary-transparent mr-3"><i class="fe fe-arrow-up-right text-primary"></i></span>
+                                    <span class="my-auto font-weight-semibold tx-15">Sent</span>
+                                </div>
+                                <span class="font-weight-semibold my-auto text-danger tx-15">+0.00255423</span>
+                            </li>
+                            <li class="list-group-item pd-x-0 d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span class="crypto-icon bg-primary-transparent mr-3"><i class="fe fe-arrow-down-left text-primary"></i></span>
+                                    <span class="my-auto font-weight-semibold tx-15">Received</span>
+                                </div>
+                                <span class="font-weight-semibold my-auto text-success tx-15">-0.02434525</span>
+                            </li>
+                        </ul>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="6">
+                    <a href="javascript:;" ngbNavLink><i class="ti-credit-card icon1"></i> My Profile</a>
+                    <ng-template ngbNavContent>
+                        <div class="d-flex align-items-start pb-3 border-bottom"> <img src="../../assets/img/users/1.jpg" class="img rounded-circle avatar-xl" alt="">
+                            <div class="pl-sm-4 pl-2" id="img-section"> <b>Profile Photo</b>
+                                <p class="mb-1">Accepted file type .png. Less than 1MB</p> <button class="btn button border btn-sm"><b>Upload</b></button>
+                            </div>
+                        </div>
+                        <div class="py-2">
+                            <div class="row py-2">
+                                <div class="col-md-6"> <label id="firstname">First Name</label> <input type="text" class="form-control" placeholder="Steve"> </div>
+                                <div class="col-md-6 pt-md-0 pt-3"> <label id="last-name">Last Name</label> <input type="text" class="form-control" placeholder="Smith"> </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-md-6"> <label id="emailid">Email Address</label> <input type="text" class="form-control" placeholder="steve_@email.com"> </div>
+                                <div class="col-md-6 pt-md-0 pt-3"> <label id="phoneno">Phone Number</label> <input type="tel" class="form-control" placeholder="+1 213-548-6015"> </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-md-6">
+                                    <label for="country">Country</label>
+                                    <ng-select name="country" id="country" class="form-control p-0">
+                                        <ng-option value="india" selected>India</ng-option>
+                                        <ng-option value="usa">USA</ng-option>
+                                        <ng-option value="uk">UK</ng-option>
+                                        <ng-option value="uae">UAE</ng-option>
+                                    </ng-select>
+                                </div>
+                                <div class="col-md-6 pt-md-0 pt-3" id="lang"> <label for="language">Language</label>
+                                    <div class="arrow">
+                                        <ng-select name="language" id="language" class="form-control p-0">
+                                            <ng-option value="english" selected>English</ng-option>
+                                            <ng-option value="english_us">English (United States)</ng-option>
+                                            <ng-option value="enguk">English UK</ng-option>
+                                            <ng-option value="arab">Arabic</ng-option>
+                                        </ng-select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="7">
+                    <a href="javascript:;" ngbNavLink routerLink="/login"><i class="ti-power-off icon1"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xl-9 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" role="tabpanel">
+                        <div [ngbNavOutlet]="nav"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

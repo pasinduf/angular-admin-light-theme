@@ -1,0 +1,12 @@
+.mobileIcon{
+    display: none;
+}
+
+@media screen and (min-width: 480px) and (max-width: 786px) {
+    .mobileIcon{
+        display: block;
+    }
+    .deskIcon{
+        display: none;
+    }
+}

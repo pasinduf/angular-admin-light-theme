@@ -1,0 +1,276 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Tags</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Elements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tags</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-9 col-lg-12">
+        <div class="card custom-card" id="basic" #basic>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Default Tags</h6>
+                    <p class="text-muted card-sub-title">Below is the basic tags example</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <span class="tag tag-default m-1">Default</span>
+                        <span class="tag tag-dark m-1">Dark</span>
+                        <span class="tag tag-primary m-1">Primary</span>
+                        <span class="tag tag-success m-1">Success</span>
+                        <span class="tag tag-info m-1">Info</span>
+                        <span class="tag tag-warning m-1">Warning</span>
+                        <span class="tag tag-danger m-1">Danger</span>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tags1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="pill" #pill>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Pill Tags</h6>
+                    <p class="text-muted card-sub-title">Below is the pill tags example</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <span class="tag tag-default tag-pill m-1">Default</span>
+                        <span class="tag tag-dark tag-pill m-1">Dark</span>
+                        <span class="tag tag-primary tag-pill m-1">Primary</span>
+                        <span class="tag tag-success tag-pill m-1">Success</span>
+                        <span class="tag tag-info tag-pill m-1">Info</span>
+                        <span class="tag tag-warning tag-pill m-1">Warning</span>
+                        <span class="tag tag-danger tag-pill m-1">Danger</span>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tags2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="default" #default>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Default Tags Addon</h6>
+                    <p class="text-muted card-sub-title">Below is the default tags addon example</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="tags">
+                            <span class="tag tag-default">
+                                One
+                                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+                            </span>
+                            <span class="tag tag-default">
+                                Two
+                                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+                            </span>
+                            <span class="tag tag-default">
+                                Three
+                                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+                            </span>
+                            <span class="tag tag-default">
+                                Four
+                                <a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="tags3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xl-3 col-lg-12 d-none d-xl-block custom-leftnav">
+        <div class="main-content-left-components">
+            <div class="card custom-card">
+                <div class="card-body component-item">
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(basic)">Default Tags</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(pill)">Pill Tags</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(default)">Default Tags
+                            Addon</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="card-header  border-bottom-0 custom-card-header">
+                    <h6 class="main-content-label mb-0">Project Status</h6>
+                </div>
+                <div class="">
+                    <div class="list d-flex align-items-center p-3">
+                        <circle-progress [showTitle]="false" [showUnits]="false" [showSubtitle]="false" [percent]="100"
+                            [radius]="18" [space]="-5" outerStrokeLinecap=square [outerStrokeWidth]="5"
+                            [innerStrokeWidth]="5" [showInnerStroke]="true" [outerStrokeColor]="'#38d250'"
+                            [innerStrokeColor]="'#77778e33'" [animation]="true" [animationDuration]="1000">
+                        </circle-progress>
+                        <div class="wrappe ml-3">
+                            <h6 class="mb-1">Project Planning</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <span class="mb-0 text-muted"><i class="fas fa-check-circle mr-2"></i>100%
+                                        Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list d-flex align-items-center p-3">
+                        <circle-progress [showTitle]="false" [showUnits]="false" [showSubtitle]="false" [percent]="100"
+                            [radius]="18" [space]="-5" outerStrokeLinecap=square [outerStrokeWidth]="5"
+                            [innerStrokeWidth]="5" [showInnerStroke]="true" [outerStrokeColor]="'#38d250'"
+                            [innerStrokeColor]="'#77778e33'" [animation]="true" [animationDuration]="1000">
+                        </circle-progress>
+                        <div class="wrappe ml-3">
+                            <h6 class="mb-1">Project Desiging</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <span class="mb-0 text-muted"><i class="fas fa-check-circle mr-2"></i>100%
+                                        Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list d-flex align-items-center p-3">
+                        <circle-progress [showTitle]="false" [showUnits]="false" [showSubtitle]="false" [percent]="76"
+                            [radius]="18" [space]="-5" outerStrokeLinecap=square [outerStrokeWidth]="5"
+                            [innerStrokeWidth]="5" [showInnerStroke]="true" [outerStrokeColor]="'#53caed'"
+                            [innerStrokeColor]="'#77778e33'" [animation]="true" [animationDuration]="1000">
+                        </circle-progress>
+                        <div class="wrappe ml-3">
+                            <h6 class="mb-1">Project Development</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <span class="mb-0 text-muted"><i class="fas fa-spinner mr-2"></i>76% Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list d-flex align-items-center  p-3">
+                        <circle-progress [showTitle]="false" [showUnits]="false" [showSubtitle]="false" [percent]="10"
+                            [radius]="18" [space]="-5" outerStrokeLinecap=square [outerStrokeWidth]="5"
+                            [innerStrokeWidth]="5" [showInnerStroke]="true" [outerStrokeColor]="'#f16d75'"
+                            [innerStrokeColor]="'#77778e33'" [animation]="true" [animationDuration]="1000">
+                        </circle-progress>
+                        <div class="wrappe ml-3">
+                            <h6 class="mb-1">Project Testing</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <span class="mb-0 text-muted"><i class="fas fa-info-circle mr-2"></i>Waiting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

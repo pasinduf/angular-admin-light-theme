@@ -1,0 +1,48 @@
+.dropdown-menu.show{
+    transform: translate(0px, 35px) !important;
+}
+  
+ 
+::ng-deep{
+    .modal.show.modalCusSty .modal-dialog{
+        border-radius: 5px;
+        height: 520px;
+        width: 600px;
+        max-width: 100%;
+    }
+
+    @media (max-width:768px) {
+        .modal.show.modalCusSty .modal-dialog{
+            width: 90% !important;
+        }
+    }
+
+    @media (max-width:360px) {
+        .nav.mailLinks{
+            width: 180px;
+        }
+    }
+}
+
+.btn-main-primary {
+    color: #ffffff;
+    background-color: #8667ff;
+    border-color: #8667ff;
+}
+
+
+.main-mail-compose-body{
+    padding: 0px !important;
+}
+.main-mail-compose-body .form-group{
+    border: 1px solid #eaedf7;
+    padding-left: 5px ;
+}
+
+.modal-body{
+    padding: 10px !important;
+}
+
+.modal-title{
+    color: #fff;
+}

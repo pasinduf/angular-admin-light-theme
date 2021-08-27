@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <div class="main-body leftmenu" [ngClass]="mainSidebarOpen">
+        <div class="page">
+
+            <!-- Sidemenu -->
+            <app-sidemenu (mouseover)="hoverEffect($event)" (mouseout)="hoverEffect($event)"></app-sidemenu>
+            <!-- /Sidemenu -->
+
+            <!-- Header -->
+            <app-header></app-header>
+            <!-- /Header -->
+
+            <!-- Main Content -->
+            <div class="main-content side-content pt-0 error-bg">
+                <div class="container-fluid">
+                    <div class="inner-body">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+            <!-- /Main Content -->
+
+            <!-- Footer -->
+            <app-footer></app-footer>
+            <!-- /Footer -->
+
+            <!-- Notification-sidebar -->
+            <app-notification-sidebar></app-notification-sidebar>
+            <!-- /Notification-sidebar -->
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<!-- Sidemenu -->
+<div class="main-sidebar main-sidebar-sticky side-menu">
+    <div class="sidemenu-logo">
+        <a class="main-logo" routerLink="/dashboard">
+            <img src="../../assets/img/brand/logo-light.png" class="header-brand-img desktop-logo" alt="logo">
+            <img src="../../assets/img/brand/icon-light.png" class="header-brand-img icon-logo" alt="logo">
+            <img src="../../assets/img/brand/logo.png" class="header-brand-img desktop-logo theme-logo" alt="logo">
+            <img src="../../assets/img/brand/icon.png" class="header-brand-img icon-logo theme-logo" alt="logo">
+        </a>
+    </div>
+    <div class="main-sidebar-body">
+        <ul class="nav">
+            <!-- 1st Level Menu -->
+            <li class="nav-item" *ngFor="let menuItem of menuItems"
+                [ngClass]="{active: menuItem.active, 'show': menuItem.active}">
+                <div class="nav-header" *ngIf="menuItem.headTitle">
+                    <span class="nav-label">{{menuItem.headTitle}}</span>
+                </div>
+                <!-- has-Link -->
+                <a class="nav-link" [routerLink]="!menuItem.type ? null : [menuItem.path]" routerLinkActive="active"
+                    *ngIf="menuItem.type === 'link' " (click)="toggleNavActive(menuItem)">
+                    <span class="shape1"></span>
+                    <span class="shape2"></span>
+                    <i class="{{menuItem.icon}} sidemenu-icon"></i>
+                    <span class="sidemenu-label">{{menuItem.title}}</span>
+                </a>
+                <!-- has-Sub -->
+                <a class="nav-link with-sub" [routerLink]="menuItem.type ? null: [menuItem.path]"
+                    routerLinkActive="active" *ngIf="menuItem.type === 'sub'" (click)="toggleNavActive(menuItem)">
+                    <span class="shape1"></span>
+                    <span class="shape2"></span>
+                    <i class="{{menuItem.icon}} sidemenu-icon"></i>
+                    <span class="sidemenu-label">{{menuItem.title}}</span>
+                    <span class="badge {{menuItem.badgeClass}} side-badge"
+                        *ngIf="menuItem.badgeClass && menuItem.badgeValue">
+                        {{menuItem.badgeValue}}
+                    </span>
+                    <i class="angle fe fe-chevron-right" [ngClass]="{ 'd-none': menuItem.badgeClass}"></i>
+
+                </a>
+
+                <!-- 2nd Level menu -->
+                <ul class="nav-sub" *ngIf="menuItem.children">
+                    <li class="nav-sub-item" *ngFor="let childrenItem of menuItem.children"
+                        [ngClass]="{'show': childrenItem.active}">
+
+                        <!-- link -->
+                        <a class="nav-sub-link" [routerLink]="!childrenItem.type ? null : [childrenItem.path]"
+                            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                            *ngIf="childrenItem.type === 'link' " (click)="toggleNavActive(childrenItem)">
+                            {{childrenItem.title}}
+                        </a>
+
+                        <!-- sub -->
+                        <a class="nav-sub-link with-sub1" [routerLink]="childrenItem.type ? null : [childrenItem.path]"
+                             *ngIf="childrenItem.type === 'sub' "
+                            (click)="toggleNavActive(childrenItem)">
+                            {{childrenItem.title}}
+                            <i class="angle fe fe-chevron-right"></i>
+                        </a>
+
+                        <!-- 3rd Level menu -->
+                        <ul class="nav-sub1" *ngIf="childrenItem.children">
+                            <li class="nav-sub-item1" *ngFor="let childrenSubItem of childrenItem.children"
+                            [ngClass]="{'show': childrenSubItem.active}">
+                                <!-- link -->
+                                <a class="nav-sub-link"
+                                    [routerLink]="!childrenSubItem.type ? [childrenSubItem.path] : null"
+                                    *ngIf="childrenSubItem.type === 'link'" [routerLinkActiveOptions]="{exact : true}">
+                                    {{childrenSubItem.title}}
+                                </a>
+                                <!-- sub -->
+                                <a class="nav-sub-link with-sub2"
+                                    [routerLink]="childrenSubItem.type ? null : [childrenSubItem.path]"
+                                    *ngIf="childrenSubItem.type === 'sub' " (click)="toggleNavActive(childrenSubItem)">
+                                    {{childrenSubItem.title}}
+                                    <i class="angle fe fe-chevron-right"></i>
+                                </a>
+
+                                <!--4th level -->
+                                <ul class="nav-sub2" *ngIf="childrenSubItem.children">
+                                    <li class="nav-sub-item2" *ngFor="let childrenSubItem1 of childrenSubItem.children"
+                                    [ngClass]="{'show': childrenSubItem1.active}">
+                                        <a class="nav-sub-link" [routerLink]="!childrenSubItem1.type ? [childrenSubItem1.path] : null "
+                                        *ngIf="childrenSubItem1.type === 'link'">
+                                        {{childrenSubItem1.title}}</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+<!-- End Sidemenu -->

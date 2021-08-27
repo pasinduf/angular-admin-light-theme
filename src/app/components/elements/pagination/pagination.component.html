@@ -1,0 +1,464 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Pagination</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Elements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Pagination</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-9 col-lg-12">
+        <div class="card custom-card overflow-hidden" id="basic" #basic>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Pagination</h6>
+                    <p class="text-muted card-sub-title">Below are basic pagination navigation.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+
+                        <ngb-pagination [collectionSize]="30">
+                            <ng-template ngbPaginationPrevious>Prev</ng-template>
+                            <ng-template ngbPaginationNext>Next</ng-template>
+                        </ngb-pagination>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pagination1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card overflow-hidden" id="icon" #icon>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Pagination with Icons</h6>
+                    <p class="text-muted card-sub-title">Looking to use an icon or symbol in place of text for some
+                        pagination links? Be sure to provide proper screen reader support with aria attributes.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-pagination [collectionSize]="30" aria-label="Default pagination"></ngb-pagination>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pagination2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card overflow-hidden" id="disactive" #disactive>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Disabled and active Pagination</h6>
+                    <p class="text-muted card-sub-title">Pagination links are customizable for different circumstances.
+                    </p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-pagination [collectionSize]="30" [disabled]='isDisabled'>
+                            <ng-template ngbPaginationPrevious>Prev</ng-template>
+                            <ng-template ngbPaginationNext>Next</ng-template>
+                        </ngb-pagination>
+                        <hr>
+                        <button class="btn btn-sm btn-outline-primary" (click)="toggleDisabled()">
+                            Toggle disabled
+                        </button>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pagination3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card overflow-hidden" id="sizes" #sizes>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Pagination Sizes</h6>
+                    <p class="text-muted card-sub-title">Fancy larger or smaller pagination Add
+                        <code>size="lg"</code> or <code>size="sm"</code> for additional sizes..
+                    </p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-sm">
+                            <div class="col-sm-6 col-md-6">
+
+                                <ngb-pagination [collectionSize]="30" size="lg" [directionLinks]="false">
+                                </ngb-pagination>
+                            </div>
+                            <div class="col-sm-6 col-md-6 mg-t-10 mg-sm-t-0">
+
+                                <ngb-pagination [collectionSize]="30" size="sm" [directionLinks]="false">
+                                </ngb-pagination>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pagination4">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card overflow-hidden" id="align" #align>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Alignment Pagination</h6>
+                    <p class="text-muted card-sub-title">Change the alignment of pagination components.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        
+                        <ngb-pagination class="d-flex justify-content-start" [collectionSize]="30" >
+                            <ng-template ngbPaginationPrevious>Prev</ng-template>
+                            <ng-template ngbPaginationNext>Next</ng-template>
+                        </ngb-pagination>
+                        <ngb-pagination class="d-flex justify-content-center" [collectionSize]="30" >
+                            <ng-template ngbPaginationPrevious>Prev</ng-template>
+                            <ng-template ngbPaginationNext>Next</ng-template>
+                        </ngb-pagination>
+                        <ngb-pagination class="d-flex justify-content-end" [collectionSize]="30" >
+                            <ng-template ngbPaginationPrevious>Prev</ng-template>
+                            <ng-template ngbPaginationNext>Next</ng-template>
+                        </ngb-pagination>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pagination5">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card overflow-hidden" id="circled" #circled>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Circled Pagination</h6>
+                    <p class="text-muted card-sub-title">Below are basic pagination navigation in circle.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-pagination [collectionSize]="30" class="pagination-circled mb-0">
+                            <ng-template ngbPaginationPrevious><i class="icon ion-ios-arrow-back"></i></ng-template>
+                            <ng-template ngbPaginationNext><i class="icon ion-ios-arrow-forward"></i></ng-template>
+                        </ngb-pagination>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pagination6">
+                        <ul ngbNav #nav6="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html6"></code></pre>
+                                    <div ngxClipboard [cbContent]="html6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts6"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav6"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card overflow-hidden" id="circled2" #circled2>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Circled Pagination Style2</h6>
+                    <p class="text-muted card-sub-title">Below are basic pagination navigation in circle.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-sm">
+                            <ngb-pagination [collectionSize]="40" class="pagination-circle" ></ngb-pagination>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pagination7">
+                        <ul ngbNav #nav7="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html7"></code></pre>
+                                    <div ngxClipboard [cbContent]="html7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts7"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav7"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card overflow-hidden" id="radiusPagination" #radiusPagination>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Radius Pagination</h6>
+                    <p class="text-muted card-sub-title">Below are basic pagination navigation in border-radius.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-sm">
+                            <ngb-pagination [collectionSize]="40" class="pagination-radius"></ngb-pagination>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pagination8">
+                        <ul ngbNav #nav8="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html8"></code></pre>
+                                    <div ngxClipboard [cbContent]="html8" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts8"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts8" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav8"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-12 d-none d-xl-block custom-leftnav">
+        <div class="main-content-left-components">
+            <div class="card custom-card">
+                <div class="card-body component-item">
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(basic)">Basic Pagination</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(icon)">Pagination with
+                            Icons</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(disactive)">Disabled and active
+                            Pagination</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(sizes)">Pagination Sizes</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(align)">Alignment
+                            Pagination</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(circled)">Circled
+                            Pagination</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(circled2)">Circled
+                            Pagination2</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(radiusPagination)">Radius
+                            Pagination</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="card custom-card our-team">
+                <div class="card-body">
+                    <div class="picture avatar-lg online text-center">
+                        <img alt="avatar" class="rounded-circle" src="../../assets/img/users/6.jpg">
+                    </div>
+                    <div class="text-center mt-3">
+                        <h5 class="pro-user-username text-dark mt-2 mb-0">Joyce Chua</h5>
+                        <p class="pro-user-desc text-muted mb-1">App Developer</p>
+                        <p class="user-info-rating">
+                            <a href="javascript:;"><i class="fa fa-star text-warning"> </i></a>
+                            <a href="javascript:;"><i class="fa fa-star text-warning"> </i></a>
+                            <a href="javascript:;"><i class="fa fa-star text-warning"> </i></a>
+                            <a href="javascript:;"><i class="fa fa-star text-warning"> </i></a>
+                            <a href="javascript:;"><i class="far fa-star text-warning"> </i></a>
+                        </p>
+                    </div>
+                    <div class="contact-info mb-0 text-center">
+                        <a href="javascript:;" class="contact-icon border text-primary"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="javascript:;" class="contact-icon border text-primary"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="javascript:;" class="contact-icon border text-primary"><i
+                                class="fab fa-google"></i></a>
+                        <a href="javascript:;" class="contact-icon border text-primary"><i
+                                class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

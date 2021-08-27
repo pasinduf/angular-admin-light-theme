@@ -1,0 +1,130 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">DataTable</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Tables</a></li>
+            <li class="breadcrumb-item active" aria-current="page">DataTable</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Simple DataTable</h6>
+                    <p class="text-muted card-sub-title">Searching, ordering and paging goodness will be immediately
+                        added to the table, as shown in this example.</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="myTable1">
+                        <thead>
+                            <tr>
+                                <th class="wd-20p">Name</th>
+                                <th class="wd-25p">Position</th>
+                                <th class="wd-20p">Office</th>
+                                <th class="wd-15p">Age</th>
+                                <th class="wd-20p">Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr *ngFor="let data of simpleData">
+                                <td>{{data.name}}</td>
+                                <td>{{data.position}}</td>
+                                <td>{{data.office}}</td>
+                                <td>{{data.age}}</td>
+                                <td>{{data.salary | currency:'USD':'symbol':'3.0-0'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Ngx DataTable</h6>
+                    <p class="text-muted card-sub-title">Ngx-DataTable using material theme DataTables.</p>
+                </div>
+
+                <ngx-datatable 
+                    class="material"
+                    [rows]="simpleData"
+                    [rowHeight]="50"
+                    columnMode="force"
+                    [headerHeight]="50"
+                    [footerHeight]="50"
+                    [scrollbarV]="true"
+                    [scrollbarH]="false"
+                    [summaryRow]="true"
+                    [summaryPosition]="'bottom'"
+                    >
+                    <ngx-datatable-column name="Name" [width]="100"></ngx-datatable-column>
+                    <ngx-datatable-column name="Position" [width]="300"></ngx-datatable-column>
+                    <ngx-datatable-column name="Office" [width]="100"></ngx-datatable-column>
+                    <ngx-datatable-column name="Age" [width]="100"></ngx-datatable-column>
+                </ngx-datatable>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Ngx DataTable</h6>
+                    <p class="text-muted card-sub-title">Ngx-DataTable using bootstrap theme DataTables.</p>
+                </div>
+
+                <ngx-datatable 
+                    class="bootstrap"
+                    [rows]="simpleData"
+                    [rowHeight]="50"
+                    columnMode="force"
+                    [headerHeight]="50"
+                    [footerHeight]="50"
+                    [scrollbarV]="true"
+                    [scrollbarH]="false"
+                    [summaryRow]="true"
+                    [summaryPosition]="'bottom'"
+                    >
+                    <ngx-datatable-column name="Name" [width]="100"></ngx-datatable-column>
+                    <ngx-datatable-column name="Position" [width]="300"></ngx-datatable-column>
+                    <ngx-datatable-column name="Office" [width]="100"></ngx-datatable-column>
+                    <ngx-datatable-column name="Age" [width]="100"></ngx-datatable-column>
+                </ngx-datatable>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

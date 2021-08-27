@@ -1,0 +1,114 @@
+::ng-deep {
+    .browse-file {
+        outline: none;
+        visibility: hidden;
+    }
+    .custom-file-label {
+        height: 38px;
+        border-radius: 5px;
+    }
+    .custom-file-label::after {
+        background: #4c4bb7 !important;
+        color: #fff !important;
+        height: 38px;
+    }
+
+    //color-picker
+    input {
+        outline: 0;
+        border: 0px solid #e3e4e9;
+        border-radius: 0.25rem;
+        padding: 0.375rem 0.75rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    //ng2-date-picker
+    dp-date-picker,
+    dp-date-picker.dp-material .dp-picker-input {
+        width: 100% !important;
+        height: 38px !important;
+    }
+    dp-date-picker.dp-material .dp-picker-input {
+        font-weight: 400;
+        line-height: 1.5;
+        color: #a8afc7;
+        background-color: #ffffff;
+        background-clip: padding-box;
+        border: 1px solid #e8e8f7;
+        border-radius: 5px;
+    }
+
+    dp-day-calendar.dp-material .dp-current-day {
+        border: 1px solid #6259ca !important;
+        background: #6259ca !important;
+        color: #fff;
+    }
+    dp-calendar-nav.dp-material .dp-calendar-nav-container {
+        border: 1px solid #e8e8f7 !important;
+        height: 40px !important;
+    }
+    dp-calendar-nav.dp-material .dp-nav-header-btn {
+        font-weight: bold;
+        color: #3b4863;
+    }
+    dp-day-calendar.dp-material .dp-calendar-wrapper {
+        border: 1px solid #e8e8f7 !important;
+        padding: 10px;
+    }
+    dp-day-calendar.dp-material .dp-calendar-weekday {
+        color: #3b4863 !important;
+        width: 33px !important;
+    }
+
+    dp-day-calendar .dp-calendar-day {
+        width: 33px !important;
+    }
+    dp-calendar-nav .dp-nav-btns-container {
+        padding: 15px;
+    }
+    dp-calendar-nav .dp-calendar-nav-container-left,
+    dp-calendar-nav .dp-calendar-nav-container-right {
+        padding: 5px;
+    }
+
+    //ng-bootstrap datepicker
+    .ngb-dp-day:focus {
+        outline: 0;
+    }
+
+    //range Slider
+    .ngx-slider .ngx-slider-pointer:focus {
+        outline: 0;
+    }
+    .ngx-slider .ngx-slider-bar {
+        height: 6px !important;
+        background-color: #f0f0ff !important;
+    }
+
+    .ngx-slider .ngx-slider-selection {
+        background: #6259ca !important;
+    }
+
+    .slider .ngx-slider .ngx-slider-pointer,
+    .custom-slider .ngx-slider .ngx-slider-pointer {
+        background: #6259ca !important;
+    }
+    .ngx-slider .ngx-slider-pointer.ngx-slider-active:after {
+        background: #ffffff !important;
+    }
+    .custom-slider .ngx-slider .ngx-slider-tick {
+        width: 2px;
+        height: 15px;
+        top: 10px;
+    }
+
+    .custom-slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+        background: #e1e4e9;
+    }
+
+    .was-validated .form-control:valid, .form-control.is-valid, input.form-control.parsley-success, textarea.form-control.parsley-success ,
+    .was-validated .form-control:invalid, .form-control.is-invalid, input.form-control.parsley-error, textarea.form-control.parsley-error{
+        background-size: calc(1.75em + .375rem) calc(0.75em + .375rem) !important;
+    }
+}

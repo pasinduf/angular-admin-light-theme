@@ -1,0 +1,373 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Popover</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Elements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Popover</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-9 col-lg-12">
+        <div class="card custom-card" id="static" #static>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Static Example</h6>
+                    <p class="text-muted card-sub-title">Documentation and examples for adding Bootstrap popovers, like
+                        those found in iOS, to any element on your site.</p>
+                </div>
+                <div class="popover-static-demo">
+                    <div class="row row-sm">
+                        <div class="col-md-6">
+                            <div class="popover bs-popover-top">
+                                <div class="arrow"></div>
+                                <h3 class="popover-header">Popover top</h3>
+                                <div class="popover-body">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare
+                                        sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mg-t-30 mg-md-t-0">
+                            <div class="popover bs-popover-bottom">
+                                <div class="arrow"></div>
+                                <h3 class="popover-header">Popover bottom</h3>
+                                <div class="popover-body">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare
+                                        sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mg-t-30">
+                            <div class="popover bs-popover-left">
+                                <div class="arrow"></div>
+                                <h3 class="popover-header">Popover Left</h3>
+                                <div class="popover-body">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare
+                                        sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mg-t-30">
+                            <div class="popover bs-popover-right">
+                                <div class="arrow"></div>
+                                <h3 class="popover-header">Popover Right</h3>
+                                <div class="popover-body">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare
+                                        sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="default" #default>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Default Popover</h6>
+                    <p class="text-muted card-sub-title">Documentation and examples for adding Bootstrap popovers, like
+                        those found in iOS, to any element on your site.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="row row-sm tx-center">
+                            <div class="col-sm-6 col-lg-3">
+                                <button type="button" class="btn ripple btn-primary" placement="top"
+                                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                    popoverTitle="Popover on top">
+                                    Popover Top
+                                </button>
+
+                            </div>
+                            <div class="col-sm-6 col-lg-3 mg-t-30 mg-sm-t-0">
+                                <button type="button" class="btn ripple btn-primary" placement="bottom"
+                                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                    popoverTitle="Popover on bottom">
+                                    Popover Bottom
+                                </button>
+
+                            </div>
+                            <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                                <button type="button" class="btn ripple btn-primary" placement="left"
+                                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                    popoverTitle="Popover on left">
+                                    Popover Left
+                                </button>
+
+                            </div>
+                            <div class="col-sm-6 col-lg-3 mg-t-30 mg-lg-t-0">
+                                <button type="button" class="btn ripple btn-primary" placement="right"
+                                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                    popoverTitle="Popover on right">
+                                    Popover Right
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="pover1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="row row-sm">
+            <div class="col-lg-12">
+                <div class="card custom-card" id="color" #color>
+                    <div class="card-body">
+                        <div>
+                            <h6 class="main-content-label mb-1">Colored Head Popover</h6>
+                            <p class="text-muted card-sub-title">A demonstration of colored title background of popover
+                                available in all four directions.</p>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="example">
+                                <div class="btn btn-list">
+                                    <button type="button" class="btn ripple btn-primary" placement="top"
+                                        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                        popoverTitle="Popover on top">
+                                        Header Color
+                                    </button>
+                                    <button type="button" class="btn ripple btn-secondary" placement="top"
+                                        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                        popoverTitle="Popover on top" popoverClass="colorHeadSecondary">
+                                        Header Color
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Prism Precode -->
+                            <figure class="highlight clip-widget" id="pover2">
+                                <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                                    <li [ngbNavItem]="1">
+                                        <a ngbNavLink>HTML</a>
+                                        <ng-template ngbNavContent>
+                                            <pre><code [highlight]="html2"></code></pre>
+                                            <div ngxClipboard [cbContent]="html2">
+                                                <div class="clipboard-icon" container="body" placement="top"
+                                                    ngbTooltip="Copy To Clipboard">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </div>
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                    <li [ngbNavItem]="2">
+                                        <a ngbNavLink>TS</a>
+                                        <ng-template ngbNavContent>
+                                            <pre><code [highlight]="ts2"></code></pre>
+                                            <div ngxClipboard [cbContent]="ts2">
+                                                <div class="clipboard-icon" container="body" placement="top"
+                                                    ngbTooltip="Copy To Clipboard">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </div>
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                    <li [ngbNavItem]="3">
+                                        <a ngbNavLink>SCSS</a>
+                                        <ng-template ngbNavContent>
+                                            <pre><code [highlight]="scss2"></code></pre>
+                                            <div ngxClipboard [cbContent]="scss2">
+                                                <div class="clipboard-icon" container="body" placement="top"
+                                                    ngbTooltip="Copy To Clipboard">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </div>
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                </ul>
+                                <div [ngbNavOutlet]="nav2"></div>
+                            </figure>
+                            <!-- End Prism Precode -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="card custom-card" id="full" #full>
+                    <div class="card-body">
+                        <div>
+                            <h6 class="main-content-label mb-1">Full Colored Popover</h6>
+                            <p class="text-muted card-sub-title">A demonstration of colored body background of popover
+                                available in all four directions.</p>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="example">
+                                <div class="btn btn-list">
+                                    <button type="button" class="btn ripple btn-primary" placement="top"
+                                        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                        popoverTitle="Popover on top" popoverClass="fullPrimary">
+                                        Header Color
+                                    </button>
+                                    <button type="button" class="btn ripple btn-secondary" placement="top"
+                                        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                        popoverTitle="Popover on top" popoverClass="fullSecondary">
+                                        Header Color
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Prism Precode -->
+                            <figure class="highlight clip-widget" id="pover3">
+                                <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                                    <li [ngbNavItem]="1">
+                                        <a ngbNavLink>HTML</a>
+                                        <ng-template ngbNavContent>
+                                            <pre><code [highlight]="html3"></code></pre>
+                                            <div ngxClipboard [cbContent]="html3">
+                                                <div class="clipboard-icon" container="body" placement="top"
+                                                    ngbTooltip="Copy To Clipboard">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </div>
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                    <li [ngbNavItem]="2">
+                                        <a ngbNavLink>TS</a>
+                                        <ng-template ngbNavContent>
+                                            <pre><code [highlight]="ts3"></code></pre>
+                                            <div ngxClipboard [cbContent]="ts3">
+                                                <div class="clipboard-icon" container="body" placement="top"
+                                                    ngbTooltip="Copy To Clipboard">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </div>
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                    <li [ngbNavItem]="3">
+                                        <a ngbNavLink>SCSS</a>
+                                        <ng-template ngbNavContent>
+                                            <pre><code [highlight]="scss3"></code></pre>
+                                            <div ngxClipboard [cbContent]="scss3">
+                                                <div class="clipboard-icon" placement="top"
+                                                    ngbTooltip="Copy To Clipboard" container="body">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </div>
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                </ul>
+                                <div [ngbNavOutlet]="nav3"></div>
+                            </figure>
+                            <!-- End Prism Precode -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-12 d-none d-xl-block custom-leftnav">
+        <div class="main-content-left-components">
+            <div class="card custom-card">
+                <div class="card-body component-item">
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(static)">Static Example</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(default)">Default Popover</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(color)">Colored Head
+                            Popover</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(full)">Full Colored Popover</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="">
+                    <div class="p-3">
+                        <h6>HTML Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>35%</span>
+                            </div>
+                            <ngb-progressbar type="primary" [value]="35"></ngb-progressbar>
+
+                        </div>
+                    </div>
+                    <div class="p-3 border-top">
+                        <h6>Wordpress Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>50%</span>
+                            </div>
+                            <ngb-progressbar type="secondary" [value]="50"></ngb-progressbar>
+
+                        </div>
+                    </div>
+                    <div class="p-3 border-top">
+                        <h6>Angular Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>40%</span>
+                            </div>
+                            <ngb-progressbar type="info" [value]="40"></ngb-progressbar>
+
+                        </div>
+                    </div>
+                    <div class="p-3 border-top">
+                        <h6>React Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>10%</span>
+                            </div>
+                            <ngb-progressbar type="danger" [value]="10"></ngb-progressbar>
+
+                        </div>
+                    </div>
+                    <div class="p-3 border-top">
+                        <h6>PHP Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>70%</span>
+                            </div>
+                            <ngb-progressbar type="success" [value]="70"></ngb-progressbar>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

@@ -1,0 +1,22 @@
+::ng-deep{
+    .input-group-append .ng-select .ng-select-container{
+        height: 44px;
+    }
+    .icons_select2.ng-select{
+        height: 46px;
+    }
+
+    @media (max-width:400px) {
+        .input-group .wd-30p {
+            width: 40% ;
+        }        
+    }
+
+    form input:checked + label:before, .form input:checked + label:before{
+        z-index: 1;
+    }
+
+    .apexcharts-tooltip{
+        z-index: 1;
+    }
+}

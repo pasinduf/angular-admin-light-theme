@@ -1,0 +1,76 @@
+::ng-deep {
+    .dataTable-top,
+    .dataTable-bottom {
+        padding: 9px 0px !important;
+    }
+    .dataTable-wrapper.no-footer .dataTable-container {
+        border: 1px solid #e8e8f7;
+    }
+
+    .dataTable-container {
+        height: 100% !important;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .dataTable-input,
+    .dataTable-selector {
+        border: 1px solid #e8e8f7;
+        border-radius: 5px;
+        outline: 0;
+    }
+
+    .dataTable-table > thead > tr > th {
+        border-bottom: 1px solid #e8e8f7;
+    }
+    .dataTable-table > tbody > tr > td,
+    .dataTable-table > tbody > tr > th,
+    .dataTable-table > tfoot > tr > td,
+    .dataTable-table > tfoot > tr > th,
+    .dataTable-table > thead > tr > td,
+    .dataTable-table > thead > tr > th{
+        vertical-align: middle;
+    } 
+    .dataTable-pagination {
+        white-space: nowrap;
+        border: 1px solid #dee2e6;
+    }
+    .dataTable-pagination li:first-child a {
+        border-left: 0;
+    }
+    .dataTable-pagination li a {
+        color: #71719a;
+        cursor: pointer;
+        background-color: #fff;
+        border-left: 1px solid #dee2e6;
+    }
+    .dataTable-pagination a:hover {
+        background-color: #f0f0ff;
+        color: #6259ca;
+        border: 1px solid #f0f0ff;
+    }
+    .dataTable-pagination a {
+        margin: 0;
+    }
+    .dataTable-pagination li.active a {
+        background-color: #6259ca;
+        border-color: #6259ca;
+        color: #fff;
+        cursor: pointer;
+    }
+    .dataTable-pagination .active a,
+    .dataTable-pagination .active a:focus,
+    .dataTable-pagination .active a:hover {
+        background-color: #6259ca;
+    }
+
+    @media (max-width : 440px) {
+        .dataTable-top > div:last-child{
+            float: left;
+        }
+    }
+
+    .dataTable-sorter::before, .dataTable-sorter::after{
+        right: -9px;
+    }
+}

@@ -1,0 +1,81 @@
+::ng-deep {
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+
+    .main-header .dropdown-menu.show {
+        top: 48px !important;
+        left: auto !important;
+    }
+    .side-header .main-profile-menu .dropdown-menu {
+        top: 53px !important;
+    }
+    .main-header-center .form-control.ng-select {
+        width: 160px !important;
+    }
+
+    .ng-select{
+        padding: 0;
+    }
+
+    .ng-select .ng-select-container {
+        border: none;
+        color: #a8afc7;
+    }
+    .dark-theme .ng-select.ng-select-opened > .ng-select-container {
+        background: #252542;
+        border-color: #b3b3b3 #ccc #d9d9d9;
+    }
+    .ng-select .ng-select-container .ng-value-container .ng-placeholder {
+        color: #a8afc7;
+    }
+    .ng-select .ng-select-container:hover {
+        box-shadow: none;
+    }
+    .ng-select.ng-select-opened .ng-select-container,
+    .ng-dropdown-panel{
+        z-index: 9 !important;
+    }
+    
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked,
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+        background-color: #f8f9ff;
+        color: #6259ca;
+    }
+    .ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
+        border-color: none;
+        box-shadow: none;
+    }
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected .ng-option-label,
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked .ng-option-label {
+        font-weight: 400;
+    }
+    .rating .fas.fa-star,
+    .user-info-rating .far.fa-star,
+    .fe.fe-star,
+    .fa.fa-star{
+        letter-spacing: 3px;
+    }
+
+    .accordion .card-header button {
+        width: 100%;
+        text-align: left;
+    }
+
+    .toast-header small{
+        margin-left: 50%;
+    }
+    
+
+    .hljs{
+        background: none;
+        color: inherit;
+        
+    }
+    .leaflet-container{
+        z-index: 0 !important;
+    }
+}
+
+

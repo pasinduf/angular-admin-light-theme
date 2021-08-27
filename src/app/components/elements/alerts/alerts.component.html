@@ -1,0 +1,536 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Alerts</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Elements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Alerts</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-9 col-lg-12">
+        <div class="card custom-card" id="basic-alert" #basicAlert>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Alerts</h6>
+                    <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+
+                        <ng-container *ngFor="let alert of alerts">
+                            <ngb-alert type="{{alert.type}}" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+                        </ng-container>
+
+                    </div>
+                    <!-- Prism Code -->
+                    <figure class="highlight clip-widget" id="alert1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+
+                    </figure>
+
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+            <div class="card-footer">
+                <table class="table main-table-reference mt-0 mb-0">
+                    <thead>
+                        <tr>
+                            <th class="wd-40p">Type Reference</th>
+                            <th class="wd-60p">Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="pd-0 bg-transparent">type="value"</code></td>
+                            <td>success | info | warning | danger</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card custom-card" id="outline-alert" #outlineAlert>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Outline Alerts</h6>
+                    <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ng-container *ngFor="let alert of outlineAlerts">
+                            <ngb-alert type="{{alert.type}}" (closed)="outlineClose(alert)">{{ alert.message }}
+                            </ngb-alert>
+                        </ng-container>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="alert2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+            <div class="card-footer">
+                <table class="table main-table-reference mt-0 mb-0">
+                    <thead>
+                        <tr>
+                            <th class="wd-40p">Type Reference</th>
+                            <th class="wd-60p">Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="pd-0 bg-transparent">type="value"</code></td>
+                            <td>outline-success | outline-info | outline-warning | outline-danger</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card custom-card" id="solid-alert" #solidAlert>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Solid Colored Alerts</h6>
+                    <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ng-container *ngFor="let alert of solidAlerts">
+                            <ngb-alert type="{{alert.type}}" (closed)="solidClose(alert)">{{ alert.message }}
+                            </ngb-alert>
+                        </ng-container>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="alert3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+            <div class="card-footer">
+                <table class="table main-table-reference mt-0 mb-0">
+                    <thead>
+                        <tr>
+                            <th class="wd-40p">Type Reference</th>
+                            <th class="wd-60p">Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code class="pd-0 bg-transparent">type="value"</code></td>
+                            <td>solid-success | solid-info | solid-warning | solid-danger</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card custom-card" id="link-alerts" #linkAlerts>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Link color Alerts</h6>
+                    <p class="text-muted card-sub-title">Use the <code class="highlighter-rouge">.alert-link</code>
+                        utility class to quickly provide matching colored links within any alert.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-alert type="primary" [dismissible]="false">
+                            This is a primary alert with <a href="javascript:;" class="alert-link">an example link</a>.
+                            Give it a click if you like.
+                        </ngb-alert>
+                        <ngb-alert type="secondary" [dismissible]="false">
+                            This is a secondary alert with <a href="javascript:;" class="alert-link">an example
+                                link</a>. Give it a click if you like.
+                        </ngb-alert>
+                        <ngb-alert type="success" [dismissible]="false">
+                            This is a success alert with <a href="javascript:;" class="alert-link">an example link</a>.
+                            Give it a click if you like.
+                        </ngb-alert>
+                        <ngb-alert type="danger" [dismissible]="false">
+                            This is a danger alert with <a href="javascript:;" class="alert-link">an example link</a>.
+                            Give it a click if you like.
+                        </ngb-alert>
+                        <ngb-alert type="warning" [dismissible]="false">
+                            This is a warning alert with <a href="javascript:;" class="alert-link">an example link</a>.
+                            Give it a click if you like.
+                        </ngb-alert>
+                        <ngb-alert type="info" [dismissible]="false">
+                            This is a info alert with <a href="javascript:;" class="alert-link">an example link</a>.
+                            Give it a click if you like.
+                        </ngb-alert>
+                        <ngb-alert type="light" [dismissible]="false">
+                            This is a light alert with <a href="javascript:;" class="alert-link">an example link</a>.
+                            Give it a click if you like.
+                        </ngb-alert>
+                        <ngb-alert type="dark" [dismissible]="false">
+                            This is a dark alert with <a href="javascript:;" class="alert-link">an example link</a>.
+                            Give it a click if you like.
+                        </ngb-alert>
+
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="alert4">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="additional-alerts" #additionalAlerts>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Additional Content Alert</h6>
+                    <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+                        paragraphs and dividers.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-alert type="success" [dismissible]="false">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>Aww yeah, you successfully read this important alert message. This example text is going
+                                to run a bit longer so that you can see how spacing within an alert works with this kind
+                                of content.</p>
+                            <hr>
+                            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice
+                                and tidy.</p>
+                        </ngb-alert>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="alert5">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="td5" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+
+        <div class="card custom-card" id="icon-alerts" #iconAlerts>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Alert With Icon</h6>
+                    <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+                        paragraphs and dividers.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-alert type="default" [dismissible]="false">
+                            <span class="alert-inner--icon"><i class="fe fe-download mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Default!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="primary" [dismissible]="false">
+                            <span class="alert-inner--icon"><i class="fe fe-check-square mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Primary!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="success" [dismissible]="false">
+                            <span class="alert-inner--icon"><i class="fe fe-thumbs-up mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Success!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="info" [dismissible]="false">
+                            <span class="alert-inner--icon"><i class="fe fe-bell mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Info!</strong> This is a warning alert—check it out
+                                that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="warning" [dismissible]="false">
+                            <span class="alert-inner--icon"><i class="fe fe-info mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Warning!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="danger" [dismissible]="false">
+                            <span class="alert-inner--icon"><i class="fe fe-slash mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Danger!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="alert6">
+                        <ul ngbNav #nav6="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html6"></code></pre>
+                                    <div ngxClipboard [cbContent]="html6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts6"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts6" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav6"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="icon-dismissalerts" #iconDismissalerts>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Alert With Icon Dismissing</h6>
+                    <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+                        paragraphs and dividers.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-alert type="default">
+                            <span class="alert-inner--icon"><i class="fe fe-download mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Default!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="primary">
+                            <span class="alert-inner--icon"><i class="fe fe-check-square mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Primary!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="success">
+                            <span class="alert-inner--icon"><i class="fe fe-thumbs-up mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Success!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="info">
+                            <span class="alert-inner--icon"><i class="fe fe-bell mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Info!</strong> This is a warning alert—check it out
+                                that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="warning">
+                            <span class="alert-inner--icon"><i class="fe fe-info mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Warning!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                        <ngb-alert type="danger">
+                            <span class="alert-inner--icon"><i class="fe fe-slash mr-1"></i></span>
+                            <span class="alert-inner--text"><strong>Danger!</strong> This is a warning alert—check it
+                                out that has an icon too!</span>
+                        </ngb-alert>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="alert7">
+                        <ul ngbNav #nav7="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html7"></code></pre>
+                                    <div ngxClipboard [cbContent]="html7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts7"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts7" >
+                                        <div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav7"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-12 d-none d-xl-block custom-leftnav">
+        <div class="main-content-left-components">
+            <div class="card custom-card">
+                <div class="card-body component-item">
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(basicAlert)">Basic Alert</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(outlineAlert)">Outline
+                            Alerts</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(solidAlert)">Solid Colored
+                            Alerts</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(linkAlerts)">Link Color
+                            Alerts</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(additionalAlerts)">Additional
+                            Content Alert</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(iconAlerts)">Alert With
+                            Icon</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(iconDismissalerts)">Alert With
+                            Icon Dismissing</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="bg-white box-shadow custom-card card" [(ngbCollapse)]="isClosed">
+                <div class="alert text-center fade show p-3">
+                    <button type="button" class="close" data-dismiss="alert" (click)="successToggle()"
+                        [attr.aria-expanded]="!isClosed">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <i class="fe fe-upload-cloud fs-50 text-success"></i>
+                    <h5 class="mt-2 mb-1">Success !</h5>
+                    <p class="mb-3 mb-3 tx-inverse">Data Upload Successfully </p>
+                    <a class="btn ripple btn-success" href="javascript:;">Continue</a>
+                </div>
+            </div>
+            <div class="bg-white box-shadow custom-card card" [(ngbCollapse)]="isClosed1">
+                <div class="alert text-center fade show p-3">
+                    <button type="button" class="close" data-dismiss="alert" (click)="dangerToggle()"
+                        [attr.aria-expanded]="!isClosed1">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <i class="fe fe-download-cloud fs-50 text-danger"></i>
+                    <h5 class="mt-2 mb-1">Oops!</h5>
+                    <p class="mb-3 mb-3 tx-inverse">Something went wrong</p>
+                    <a class="btn ripple btn-danger" href="javascript:;">Try again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

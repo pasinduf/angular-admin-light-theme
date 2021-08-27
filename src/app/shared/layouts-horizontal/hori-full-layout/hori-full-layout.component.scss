@@ -1,0 +1,16 @@
+
+.demo_changer .sidebar-right1 {
+    z-index: 10000;
+    margin-top: 0px !important;
+    max-height: 100vh;
+}
+@media (max-width: 330px) {
+    .demo_changer .sidebar-right1 {
+        box-shadow: 2px 4px 29px -4px rgb(0 0 0 / 10%);
+        max-height: 100vh;
+        height: auto !important;
+        margin-right: -10px !important;
+    }
+}
+
+

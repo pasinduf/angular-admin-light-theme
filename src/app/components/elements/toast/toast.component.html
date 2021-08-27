@@ -1,0 +1,403 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Toast</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Elements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Toast</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-9 col-lg-12">
+        <div class="card custom-card" id="Declarative" #Declarative>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Declarative inline usage</h6>
+                    <p class="text-muted card-sub-title">Toasts are as flexible as you need and have very little
+                        required markup. At a minimum, we require a single element to contain your “toasted” content and
+                        strongly encourage a dismiss button.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-toast *ngIf="show" header="Hello" [autohide]="false" (hidden)="show=false">
+                            I am a simple static toast with a header.
+                        </ngb-toast>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="toast1">
+                        <ul ngbNav #nav1="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html1"></code></pre>
+                                    <div ngxClipboard [cbContent]="html1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts1"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts1">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav1"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="Template" #Template>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Using a Template as header</h6>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-toast *ngIf="show1" [autohide]="false" (hidden)="show1=false">
+                            <ng-template ngbToastHeader>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                    <path
+                                        d="M16.896 10l-4.896-8-4.896 8-7.104-4 3 11v5h18v-5l3-11-7.104 4zm-11.896 10v-2h14v2h-14zm14.2-4h-14.4l-1.612-5.909 4.615 2.598 4.197-6.857 4.197 6.857 4.615-2.598-1.612 5.909z" />
+                                </svg>
+                                <strong class="mx-1">Fancy</strong>header notification
+                            </ng-template>
+                            Hello, I am toast. Have you noticed my header has been generated from a Template?
+                        </ngb-toast>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="toast2">
+                        <ul ngbNav #nav2="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html2"></code></pre>
+                                    <div ngxClipboard [cbContent]="html2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts2"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts2">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav2"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="stacking" #stacking>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Stacking</h6>
+                    <p class="text-muted card-sub-title">When you have multiple toasts, we default to vertiaclly
+                        stacking them in a readable manner.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-toast *ngIf="show2" [autohide]="false" (hidden)="show2=false">
+                            <ng-template ngbToastHeader>
+                                <h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="text-muted">Just
+                                    now</small>
+                            </ng-template>
+                            See? Just like this.
+                        </ngb-toast>
+                        <ngb-toast *ngIf="show3" [autohide]="false" (hidden)="show3=false">
+                            <ng-template ngbToastHeader>
+                                <h6 class="tx-14 mg-b-0 mg-r-auto">Notification</h6><small class="text-muted">11 mins
+                                    ago</small>
+                            </ng-template>
+                            Hello, world! This is a toast message.
+                        </ngb-toast>
+
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="toast3">
+                        <ul ngbNav #nav3="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html3"></code></pre>
+                                    <div ngxClipboard [cbContent]="html3">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts3"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts3">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav3"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="Closeable" #Closeable>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Closeable toast</h6>
+                    <p class="text-muted card-sub-title">If you close me, I will automatically re-appear after a few
+                        seconds.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-toast *ngIf="isclose" header="Click my close icon →" [autohide]="false" (hidden)="close()">
+                            If you close me, I will automatically re-appear after a few seconds.
+                        </ngb-toast>
+                        <p *ngIf="!isclose">I'll be back!</p>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="toast3">
+                        <ul ngbNav #nav4="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html4"></code></pre>
+                                    <div ngxClipboard [cbContent]="html4">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts4"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts4">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav4"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="autohide" #hide>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Prevent autohide on mouseover</h6>
+                    <p class="text-muted card-sub-title">In this demo, you can show a toast by clicking the button
+                        below. It will hide itself after a 5 seconds delay unless you simply hover it with your mouse.
+                    </p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <button class="btn btn-primary" (click)="show5 = true">
+                            Click me to show a toast
+                        </button>
+                        <hr *ngIf="show5">
+                        <ngb-toast *ngIf="show5" header="Autohide can be cancelled" [delay]="5000" [autohide]="autohide"
+                            (mouseenter)="autohide = false" (mouseleave)="autohide = true"
+                            (hide)="show5 = false; autohide = true" [class.bg-warning]="!autohide">
+                            <div *ngIf="autohide">
+                                Try to mouse hover me.
+                            </div>
+                            <div *ngIf="!autohide">
+                                I will remain visible until you leave again.
+                            </div>
+                        </ngb-toast>
+                    </div>
+                    <!-- Prism Precode -->
+                    <figure class="highlight clip-widget" id="toast3">
+                        <ul ngbNav #nav5="ngbNav" class="nav-tabs">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>HTML</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="html5"></code></pre>
+                                    <div ngxClipboard [cbContent]="html5">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>TS</a>
+                                <ng-template ngbNavContent>
+                                    <pre><code [highlight]="ts5"></code></pre>
+                                    <div ngxClipboard [cbContent]="ts5">
+                                        <div class="clipboard-icon" container="body" placement="top"
+                                            ngbTooltip="Copy To Clipboard">
+                                            <i class="fa fa-clipboard"></i>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav5"></div>
+                    </figure>
+                    <!-- End Prism Precode -->
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="management" #management>
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Toast management service</h6>
+                    <p class="text-muted card-sub-title">In this demo, you can show a toast by clicking the button
+                        below. It will hide itself after a 5 seconds delay unless you simply hover it with your mouse.
+                    </p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <p>Please click one of the button to see a Toast being displayed in the top right corner of your
+                            screen:</p>
+                        <button class="btn btn-primary mb-2" (click)="showStandard()"
+                            ngbTooltip="Will disappear in 5s">Standard toast</button>&nbsp;
+                        <button class="btn btn-success mb-2" (click)="showSuccess()"
+                            ngbTooltip="Will disappear in 10s">Success toast</button>&nbsp;
+
+                        <ng-template #dangerTpl>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M10.872 6.831l1.695 3.904 3.654-1.561-1.79 3.426 3.333.954-3.417 1.338 2.231 4.196-4.773-2.582-2.869 2.287.413-3.004-3.792-.726 2.93-1.74-1.885-2.512 3.427.646.843-4.626zm-.786-6.831l-1.665 9.119-6.512-1.228 3.639 4.851-5.548 3.294 7.108 1.361-.834 6.076 5.742-4.577 9.438 5.104-4.288-8.064 6.834-2.677-6.661-1.907 3.25-6.22-6.98 2.982-3.523-8.114z" />
+                            </svg>
+                            Danger !
+                        </ng-template>
+                        <button class="btn btn-danger mb-2" (click)="showDanger(dangerTpl)"
+                            ngbTooltip="Will disappear in 15s">Danger toast</button>&nbsp;
+
+                        <app-toast-container aria-live="polite" aria-atomic="true"></app-toast-container>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xl-3 col-lg-12 d-none d-xl-block custom-leftnav">
+        <div class="main-content-left-components">
+            <div class="card custom-card">
+                <div class="card-body component-item">
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(Declarative)">Declarative</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(Template)">Template as
+                            Header</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(stacking)">Stacking</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(Closeable)">Closeable Toast</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(hide)">Prevent autohide on
+                            mouseover</a>
+                        <a class="nav-link" href="javascript:;" (click)="scrollToElement(management)">Toast Management
+                            Service</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="card custom-card">
+                <div class="">
+                    <div class="p-3">
+                        <h6>HTML Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>35%</span>
+                            </div>
+                            <ngb-progressbar type="primary" [value]="35"></ngb-progressbar>
+
+                        </div>
+                    </div>
+                    <div class="p-3 border-top">
+                        <h6>Wordpress Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>50%</span>
+                            </div>
+                            <ngb-progressbar type="secondary" [value]="50"></ngb-progressbar>
+                        </div>
+                    </div>
+                    <div class="p-3 border-top">
+                        <h6>Angular Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>40%</span>
+                            </div>
+                            <ngb-progressbar type="info" [value]="40"></ngb-progressbar>
+
+                        </div>
+                    </div>
+                    <div class="p-3 border-top">
+                        <h6>React Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>10%</span>
+                            </div>
+                            <ngb-progressbar type="danger" [value]="10"></ngb-progressbar>
+
+                        </div>
+                    </div>
+                    <div class="p-3 border-top">
+                        <h6>PHP Project</h6>
+                        <div class="main-traffic-detail-item">
+                            <div>
+                                <span>Project status</span> <span>70%</span>
+                            </div>
+                            <ngb-progressbar type="success" [value]="70"></ngb-progressbar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

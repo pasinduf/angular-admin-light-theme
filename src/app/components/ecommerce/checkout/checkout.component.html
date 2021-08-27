@@ -1,0 +1,404 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Checkout</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Ecommerce</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row -->
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card custom-card">
+            <div class="card-header bg-transparent border-bottom-0">
+                <div>
+                    <label class="main-content-label mb-2">Checkout</label> <span
+                        class="d-block tx-12 mb-0 text-muted">The Project Budget is a tool used by project managers to
+                        estimate the total cost of a project</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-6 mx-auto border p-5">
+                        <div>
+                            <div id="checkoutsteps" class="mt-5">
+                                <aw-wizard [navBarLayout]="'large-empty-symbols'">
+                                    <aw-wizard-step stepTitle="Sign In" [navigationSymbol]="{ symbol: '1' }">
+                                        <form [formGroup]="firstFormGroup" class="mt-5">
+                                            <h5 class="text-left mb-2">Signin to Your Account</h5>
+                                            <p class="mb-4 text-muted tx-13 ml-0 text-left">SignIn to create, discover
+                                                and
+                                                connect with the global community</p>
+                                            <div class="form-group text-left">
+                                                <label>Email</label>
+                                                <input class="form-control" placeholder="Enter your email" type="email"
+                                                    placeholder="email@example.com" formControlName="email"
+                                                    autocomplete="off">
+                                                <ng-container class="invalid"
+                                                    *ngIf="firstFormGroup.get('email').hasError('required') && firstFormGroup.get('email').touched">
+                                                    <small class="tx-danger">Email is required</small>
+                                                </ng-container>
+                                                <ng-container class="invalid"
+                                                    *ngIf="firstFormGroup.get('email').hasError('email') && firstFormGroup.get('email').touched">
+                                                    <small class="tx-danger">Email is not valid</small>
+                                                </ng-container>
+
+                                            </div>
+                                            <div class="form-group text-left">
+                                                <label>Password</label>
+                                                <input class="form-control" placeholder="Enter your password"
+                                                    type="password" placeholder="Password" formControlName="password">
+                                                <ng-container class="invalid"
+                                                    *ngIf="firstFormGroup.get('password').hasError('required') && firstFormGroup.get('password').touched">
+                                                    <small class="tx-danger">Password is required</small>
+                                                </ng-container>
+                                            </div>
+
+                                            <button class="btn ripple btn-main-primary pull-right" type="button"
+                                                awNextStep [disabled]="!firstFormGroup.valid">Sign In</button>
+                                        </form>
+                                    </aw-wizard-step>
+                                    <aw-wizard-step stepTitle="Billing" [navigationSymbol]="{ symbol: '2' }">
+                                        <form [formGroup]="secondFormGroup" class="mt-5">
+                                            <h5 class="text-left mb-2">Billing Information</h5>
+                                            <p class="mb-4 text-muted tx-13 ml-0 text-left">Lorem Ipsum has been the
+                                                industry's standard dummy text ever since</p>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="firstName">First name</label>
+                                                    <input type="text" class="form-control" id="firstName" placeholder="John"
+                                                        formControlName="firstName" autocomplete="off">
+                                                    <ng-container class="invalid"
+                                                        *ngIf="secondFormGroup.get('firstName').hasError('required') && secondFormGroup.get('firstName').touched">
+                                                        <small class="tx-danger">First Name is required</small>
+                                                    </ng-container>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="lastName">Last name</label>
+                                                    <input type="text" class="form-control" id="lastName" placeholder="Deo"
+                                                        formControlName="lastName" autocomplete="off">
+                                                    <ng-container class="invalid"
+                                                        *ngIf="secondFormGroup.get('lastName').hasError('required') && secondFormGroup.get('lastName').touched">
+                                                        <small class="tx-danger">Last Name is required</small>
+                                                    </ng-container>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="address">Address</label>
+                                                <input type="text" class="form-control" id="address"
+                                                    placeholder="Address" formControlName="address" autocomplete="off">
+                                                <ng-container class="invalid"
+                                                    *ngIf="secondFormGroup.get('address').hasError('required') && secondFormGroup.get('address').touched">
+                                                    <small class="tx-danger">Please enter your shipping address.</small>
+                                                </ng-container>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="address2">Address 2 <span
+                                                        class="text-muted">(Optional)</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="address2"
+                                                    placeholder="Address" formControlName="address2" autocomplete="off">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="contact">Contact Number</label>
+                                                <input type="number" class="form-control" id="contact"
+                                                    placeholder="Contact" formControlName="contact" autocomplete="off">
+                                                <ng-container class="invalid"
+                                                    *ngIf="secondFormGroup.get('contact').hasError('required') && secondFormGroup.get('contact').touched">
+                                                    <small class="tx-danger">Contact is required</small>
+                                                </ng-container>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-5 mb-3">
+                                                    <label for="country">Country</label>
+                                                    <ng-select class="form-control" id="country"
+                                                        placeholder="Select Country" formControlName="country">
+                                                        <ng-option>India</ng-option>
+                                                    </ng-select>
+                                                    <ng-container class="invalid"
+                                                        *ngIf="secondFormGroup.get('country').hasError('required') && secondFormGroup.get('country').touched">
+                                                        <small class="tx-danger">Please select a valid country.</small>
+                                                    </ng-container>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="state">State</label>
+                                                    <ng-select class="form-control" id="state"
+                                                        placeholder="Select State" formControlName="state">
+                                                        <ng-option>Delhi</ng-option>
+                                                        <ng-option>Telangana</ng-option>
+                                                        <ng-option>Maharashtra</ng-option>
+                                                        <ng-option>Kerala</ng-option>
+                                                        <ng-option>Madhya Pradesh</ng-option>
+                                                        <ng-option>Uttar Pradesh</ng-option>
+                                                    </ng-select>
+                                                    <ng-container class="invalid"
+                                                        *ngIf="secondFormGroup.get('state').hasError('required') && secondFormGroup.get('state').touched">
+                                                        <small class="tx-danger">Please provide a valid state.</small>
+                                                    </ng-container>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="zip">Zip</label>
+                                                    <input type="number" class="form-control" id="zip" placeholder="zip"
+                                                        formControlName="zip" autocomplete="off">
+                                                    <ng-container class="invalid"
+                                                        *ngIf="secondFormGroup.get('zip').hasError('required') && secondFormGroup.get('zip').touched">
+                                                        <small class="tx-danger">Zip code required.</small>
+                                                    </ng-container>
+                                                    
+                                                </div>
+                                            </div>
+                                            <hr class="mb-4">
+                                            <button class="btn btn-primary pull-right mb-2" type="submit" awNextStep
+                                                [disabled]="!secondFormGroup.valid">Continue to order
+                                            </button>
+                                            <button class="btn btn-secondary pull-right mr-1" type="button"
+                                                awPreviousStep>Previous</button>
+                                        </form>
+                                    </aw-wizard-step>
+                                    <aw-wizard-step stepTitle="Order" [navigationSymbol]="{ symbol: '3' }">
+                                        <form class="mt-5">
+                                            <h5 class="text-left mb-2">Your Order</h5>
+                                            <p class="mb-4 text-muted tx-13 ml-0 text-left">Lorem Ipsum has been the
+                                                industry's standard dummy text ever since</p>
+                                            <div class="product">
+                                                <div class="item">
+                                                    <div class="left">
+                                                        <a href="javascript:;" class="thumb">
+                                                            <img src="../../assets/img/pngs/19.png" alt="">
+                                                        </a>
+                                                        <div class="purchase">
+                                                            <h6> <a href="javascript:;">Mobile Phone Mi</a> </h6>
+                                                            <span>x1</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price">$290</span>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="left">
+                                                        <a href="javascript:;" class="thumb">
+                                                            <img src="../../assets/img/pngs/16.png" alt="">
+                                                        </a>
+                                                        <div class="purchase">
+                                                            <h6> <a href="javascript:;">Flowerpot</a> </h6>
+                                                            <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price">$124</span>
+                                                </div>
+                                            </div>
+                                            <div class="checkout">
+                                                <div class="subtotal">
+                                                    <span class="heading">Subtotal</span>
+                                                    <span class="total tx-20 font-weight-bold">$364</span>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-primary pull-right"
+                                                awNextStep>Next</button>
+                                            <button class="btn btn-secondary pull-right mr-1" type="button"
+                                                awPreviousStep>Previous</button>
+                                        </form>
+                                    </aw-wizard-step>
+                                    <aw-wizard-step stepTitle="Payments" [navigationSymbol]="{ symbol: '4' }">
+                                        <form [formGroup]="thirdFormGroup" class="mt-5">
+                                            <div class="">
+                                                <h5 class="text-left mb-2">Payments</h5>
+                                                <p class="mb-4 text-muted tx-13 ml-0 text-left">Lorem Ipsum has been the
+                                                    industry's standard dummy text ever since</p>
+                                            </div>
+                                            <div class="card-pay">
+                                                <nav ngbNav #nav="ngbNav">
+                                                    <ng-container ngbNavItem>
+                                                        <a href="javascript:;" ngbNavLink><i
+                                                                class="fa fa-credit-card"></i>
+                                                            Credit Card</a>
+                                                        <ng-template ngbNavContent>
+                                                            <div class="form-group">
+                                                                <label class="form-label"
+                                                                    for="cardholderName">CardHolder Name</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="First Name" id="cardholderName"
+                                                                    formControlName="cardholderName" autocomplete="off">
+                                                                <ng-container class="invalid"
+                                                                    *ngIf="thirdFormGroup.get('cardholderName').hasError('required') && thirdFormGroup.get('cardholderName').touched">
+                                                                    <small class="tx-danger">Card Holder's Name is
+                                                                        required</small>
+                                                                </ng-container>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="form-label">Card number</label>
+                                                                <div class="input-group">
+                                                                    <input type="number" class="form-control"
+                                                                        placeholder="Search for..."
+                                                                        formControlName="cardNumber">
+                                                                    <span class="input-group-append">
+                                                                        <button class="btn btn-secondary box-shadow-0"
+                                                                            type="button"><i class="fab fa-cc-visa"></i>
+                                                                            &nbsp;
+                                                                            <i class="fab fa-cc-amex"></i> &nbsp;
+                                                                            <i
+                                                                                class="fab fa-cc-mastercard"></i></button>
+                                                                    </span>
+                                                                </div>
+                                                                <ng-container class="invalid"
+                                                                    *ngIf="thirdFormGroup.get('cardNumber').hasError('required') && thirdFormGroup.get('cardNumber').touched">
+                                                                    <small class="tx-danger">Card Number is
+                                                                        required</small>
+                                                                </ng-container>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-8">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Expiration</label>
+                                                                        <div class="input-group">
+                                                                            <span class="w-50">
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    placeholder="MM" name="Month"
+                                                                                    formControlName="month">
+                                                                                <ng-container class="invalid"
+                                                                                    *ngIf="thirdFormGroup.get('month').hasError('required') && thirdFormGroup.get('month').touched">
+                                                                                    <small class="tx-danger">Month is required</small>
+                                                                                </ng-container>
+                                                                            </span>
+                                                                            <span class="w-50">
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    placeholder="YY" name="Year"
+                                                                                    formControlName="year">
+                                                                                <ng-container class="invalid"
+                                                                                    *ngIf="thirdFormGroup.get('year').hasError('required') && thirdFormGroup.get('year').touched">
+                                                                                    <small class="tx-danger">Year is required</small>
+                                                                                </ng-container>
+                                                                            </span>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">CVV <i
+                                                                                class="fa fa-question-circle"></i></label>
+                                                                        <input type="number" class="form-control"
+                                                                            formControlName="cvv">
+                                                                        <ng-container class="invalid"
+                                                                            *ngIf="thirdFormGroup.get('cvv').hasError('required') && thirdFormGroup.get('cvv').touched">
+                                                                            <small class="tx-danger">CVV is
+                                                                                required</small>
+                                                                        </ng-container>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </ng-template>
+                                                    </ng-container>
+                                                    <ng-container ngbNavItem>
+                                                        <a href="javascript:;" ngbNavLink><i class="fab fa-paypal"></i>
+                                                            Paypal</a>
+                                                        <ng-template ngbNavContent>
+                                                            <p class="mt-4">Paypal is easiest way to pay online</p>
+                                                            <p><a href="javascript:;" class="btn btn-primary"><i
+                                                                        class="fab fa-paypal"></i>
+                                                                    Log in my Paypal</a></p>
+                                                            <p class="mb-0"><strong>Note:</strong> Nemo enim ipsam
+                                                                voluptatem
+                                                                quia voluptas sit aspernatur aut odit aut fugit, sed
+                                                                quia
+                                                                consequuntur magni dolores eos qui ratione voluptatem
+                                                                sequi
+                                                                nesciunt. </p>
+                                                        </ng-template>
+                                                    </ng-container>
+                                                    <ng-container ngbNavItem>
+                                                        <a href="javascript:;" ngbNavLink><i
+                                                                class="fa fa-university"></i>
+                                                            Bank Transfer</a>
+                                                        <ng-template ngbNavContent>
+                                                            <p class="mt-4">Bank account details</p>
+                                                            <dl class="card-text">
+                                                                <dt>BANK: </dt>
+                                                                <dd> THE UNION BANK 0456</dd>
+                                                            </dl>
+                                                            <dl class="card-text">
+                                                                <dt>Account number: </dt>
+                                                                <dd> 67542897653214</dd>
+                                                            </dl>
+                                                            <dl class="card-text">
+                                                                <dt>IBAN: </dt>
+                                                                <dd>543218769</dd>
+                                                            </dl>
+                                                            <p class="mb-0"><strong>Note:</strong> Nemo enim ipsam
+                                                                voluptatem
+                                                                quia voluptas sit aspernatur aut odit aut fugit, sed
+                                                                quia
+                                                                consequuntur magni dolores eos qui ratione voluptatem
+                                                                sequi
+                                                                nesciunt. </p>
+                                                        </ng-template>
+                                                    </ng-container>
+                                                </nav>
+
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active show" id="tab20">
+                                                        <div [ngbNavOutlet]="nav"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary pull-right" type="submit" awNextStep
+                                                [disabled]="!thirdFormGroup.valid">Next</button>
+                                            <button class="btn btn-secondary pull-right mr-1" type="button"
+                                                awPreviousStep>Previous</button>
+                                        </form>
+                                    </aw-wizard-step>
+                                    <aw-wizard-completion-step stepTitle="Finished" [navigationSymbol]="{ symbol: '5' }"
+                                        awEnableBackLinks>
+                                        <form class="mt-5">
+                                            <div class="text-center">
+                                                <div class="">
+                                                    <h5 class="mb-4">Your order Confirmed!</h5>
+                                                </div>
+                                                <svg class="wd-100 ht-100 mx-auto mb-3" version="1.1"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                                                    <circle class="path circle" fill="none" stroke="#73AF55"
+                                                        stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1"
+                                                        r="62.1" />
+                                                    <polyline class="path check" fill="none" stroke="#73AF55"
+                                                        stroke-width="6" stroke-linecap="round" stroke-miterlimit="10"
+                                                        points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+                                                </svg>
+                                                <p class="success pl-5 pr-5">Order placed successfully. Your order will
+                                                    be
+                                                    dispacted soon. meanwhile you can track your order in my order
+                                                    section.</p>
+                                            </div>
+                                            <button type="button" class="btn btn-primary pull-right" awNextStep>Order
+                                                Again</button>
+                                            <button class="btn btn-secondary pull-right mr-1" type="button"
+                                                awPreviousStep>Previous</button>
+                                        </form>
+                                    </aw-wizard-completion-step>
+                                </aw-wizard>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

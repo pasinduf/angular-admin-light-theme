@@ -1,0 +1,213 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">Currency-exchange</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:;">Crypto Currencies</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Currency-exchange</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-download mr-2"></i> Import
+            </button>
+            <button type="button" class="btn btn-white btn-icon-text my-2 mr-2">
+                <i class="fe fe-filter mr-2"></i> Filter
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                <i class="fe fe-download-cloud mr-2"></i> Download Report
+            </button>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+
+<!-- Row-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="pt-0 card custom-card pt-7 bg-background2 card pb-7 border-0">
+            <div class="header-text mb-0">
+                <div class="container-fluid p-5">
+                    <div class="text-left text-white background-text">
+                        <h1 class="mb-3 tx-50 font-weight-semibold">Buy and sell Coins without additional fees</h1>
+                        <p class="tx-18 mb-5 text-white-50">Buy now and get +50% extra bonus Minimum pre-sale
+                            amount 100 Crypto Coin. We accept BTC crypto-currency..</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 d-block mx-auto">
+                            <div class="item-search-tabs mb-6 background-text">
+                                <div class="buy-sell">
+                                    <div class="form row mx-auto justify-content-center d-flex p-4">
+                                        <div class="form-group col-xl-6 col-lg-6 col-md-12 mb-0">
+                                            <input type="text" class="form-control mb-4 mb-lg-0" id="text7"
+                                                placeholder="13.2458">
+                                        </div>
+                                        <div class="form-group col-xl-6 col-lg-6 col-md-12 mb-0">
+                                            <ng-select class="form-control br-md-0" [items]="coinsData"
+                                                [(ngModel)]="coinSelect">
+                                            </ng-select>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 my-3 text-left">
+                                            <i class=" pe-7s-repeat exchange-icon tx-30 text-white inline-block"></i>
+                                        </div>
+                                        <div class="form-group  col-xl-6 col-lg-6 col-md-12 mb-0">
+                                            <input type="text" class="form-control mb-4 mb-lg-0" id="text6"
+                                                placeholder="02.24">
+                                        </div>
+                                        <div class="form-group col-xl-6 col-lg-6 col-md-12 mb-0">
+                                            <ng-select class="form-control br-md-0" [items]="currencyData"
+                                                [(ngModel)]="currencySelect">
+                                            </ng-select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center background-text">
+                                <a href="javascript:;" class="btn btn-warning pl-6 pr-6 pt-2 pb-2 mx-auto float-left mt-5">EXCHANGE
+                                    NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /header-text -->
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row row-sm">
+            <div class="col-xl-4 col-md-12 col-lg-6">
+                <div class="card custom-card crypto-card overflow-hidden">
+                    <div class="card-body pb-0">
+                        <div class="mb-0 d-flex">
+                            <h5 class="d-flex mb-0"><span class="cryp-icon bg-primary my-auto mr-2 mt-1"><i
+                                        class="cf cf-btc"></i></span>Bitcoin BTC</h5>
+                            <span class="float-right ml-auto btn btn-success btn-sm">24h</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="d-flex my-auto font-weight-normal">0.00000434<span
+                                    class="text-info tx-14 mt-auto ml-2">$0.04</span> </h5>
+                            <div class="text-danger"><i class="mr-1 text-success"></i> +4.16%</div>
+                        </div>
+                        <div class="chart-wrapper mt-4">
+                            <apx-chart [chart]="cryptoExchangeApex.chart" [series]="cryptoExApexData1.series"
+                                [colors]="cryptoExchangeApex.colors" [stroke]="cryptoExchangeApex.stroke"
+                                [tooltip]="cryptoExchangeApex.tooltip" >
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-lg-6">
+                <div class="card custom-card crypto-card overflow-hidden">
+                    <div class="card-body pb-0">
+                        <div class="mb-0 d-flex">
+                            <h5 class="d-flex mb-0"><span class="cryp-icon bg-primary my-auto mr-2 mt-1"><i
+                                        class="cf cf-eth"></i></span> Ethereum ETH</h5>
+                            <span class="float-right ml-auto btn btn-success btn-sm">24h</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="d-flex my-auto font-weight-normal">0.00000235<span
+                                    class="text-info tx-14 mt-auto ml-2">$0.12</span> </h5>
+                            <div class="text-danger"><i class="mr-1 text-success"></i> +2.12%</div>
+                        </div>
+                        <div class="chart-wrapper mt-4">
+                            <apx-chart [chart]="cryptoExchangeApex.chart" [series]="cryptoExApexData2.series"
+                                [colors]="cryptoExchangeApex.colors" [stroke]="cryptoExchangeApex.stroke"
+                                [tooltip]="cryptoExchangeApex.tooltip" >
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-lg-6">
+                <div class="card custom-card crypto-card overflow-hidden">
+                    <div class="card-body pb-0">
+                        <div class="mb-0 d-flex">
+                            <h5 class="d-flex mb-0"><span class="cryp-icon bg-primary my-auto mr-2 mt-1"><i
+                                        class="cf cf-xrp"></i></span> Ripple XRP</h5>
+                            <span class="float-right ml-auto btn btn-success btn-sm">24h</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="d-flex my-auto font-weight-normal">0.00000434<span
+                                    class="text-info tx-14 mt-auto ml-2">$0.03</span> </h5>
+                            <div class="text-danger"><i class="mr-1 text-success"></i> +3.12%</div>
+                        </div>
+                        <div class="chart-wrapper mt-4">
+                            <apx-chart [chart]="cryptoExchangeApex.chart" [series]="cryptoExApexData3.series"
+                                [colors]="cryptoExchangeApex.colors" [stroke]="cryptoExchangeApex.stroke"
+                                [tooltip]="cryptoExchangeApex.tooltip" >
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-lg-6">
+                <div class="card custom-card crypto-card overflow-hidden">
+                    <div class="card-body pb-0">
+                        <div class="mb-0 d-flex">
+                            <h5 class="d-flex mb-0"><span class="cryp-icon bg-primary my-auto mr-2 mt-1"><i
+                                        class="cf cf-dash"></i></span>Dash DASH</h5>
+                            <span class="float-right ml-auto btn btn-success btn-sm">24h</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="d-flex my-auto font-weight-normal">0.00000372<span
+                                    class="text-info tx-14 mt-auto ml-2">$0.12</span> </h5>
+                            <div class="text-danger"><i class="mr-1 text-success"></i> +4.23%</div>
+                        </div>
+                        <div class="chart-wrapper mt-4">
+                            <apx-chart [chart]="cryptoExchangeApex.chart" [series]="cryptoExApexData4.series"
+                                [colors]="cryptoExchangeApex.colors" [stroke]="cryptoExchangeApex.stroke"
+                                [tooltip]="cryptoExchangeApex.tooltip" >
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-lg-6">
+                <div class="card custom-card crypto-card overflow-hidden">
+                    <div class="card-body pb-0">
+                        <div class="mb-0 d-flex">
+                            <h5 class="d-flex mb-0"><span class="cryp-icon bg-primary my-auto mr-2 mt-1"><i
+                                        class="cf cf-neos"></i></span> Neo NEO</h5>
+                            <span class="float-right ml-auto btn btn-success btn-sm">24h</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="d-flex my-auto font-weight-normal">0.00000257<span
+                                    class="text-info tx-14 mt-auto ml-2">$0.07</span> </h5>
+                            <div class="text-danger"><i class="mr-1 text-success"></i> +2.17%</div>
+                        </div>
+                        <div class="chart-wrapper mt-4">
+                            <apx-chart [chart]="cryptoExchangeApex.chart" [series]="cryptoExApexData5.series"
+                                [colors]="cryptoExchangeApex.colors" [stroke]="cryptoExchangeApex.stroke"
+                                [tooltip]="cryptoExchangeApex.tooltip" >
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-lg-6">
+                <div class="card custom-card crypto-card overflow-hidden">
+                    <div class="card-body pb-0">
+                        <div class="mb-0 d-flex">
+                            <h5 class="d-flex mb-0"><span class="cryp-icon bg-primary my-auto mr-2 mt-1"><i
+                                        class="cf cf-ltc"></i></span> Litecoin LTC</h5>
+                            <span class="float-right ml-auto btn btn-success btn-sm">24h</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="d-flex my-auto font-weight-normal">0.00000534<span
+                                    class="text-info tx-14 mt-auto ml-2">$0.32</span> </h5>
+                            <div class="text-danger"><i class="mr-1 text-success"></i> +2.12%</div>
+                        </div>
+                        <div class="chart-wrapper mt-4">
+                            <apx-chart [chart]="cryptoExchangeApex.chart" [series]="cryptoExApexData6.series"
+                                [colors]="cryptoExchangeApex.colors" [stroke]="cryptoExchangeApex.stroke"
+                                [tooltip]="cryptoExchangeApex.tooltip" >
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Row End -->

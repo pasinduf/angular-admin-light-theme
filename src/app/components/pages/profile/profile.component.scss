@@ -1,0 +1,27 @@
+::ng-deep{
+
+    .option-dots:hover {
+        background: none;
+     }
+
+
+     .btn.btn-rounded.btn-danger{
+         margin-right: 5px;
+     }
+
+     .ng-select, .ng-select div, .ng-select input, .ng-select span{
+         box-sizing: content-box !important;
+     }
+}
+
+.user-lock .dropdown-menu{
+    transform: translate(0px, 21px) !important;
+    z-index: 9 !important;
+    right: 0%;
+    left: initial !important;
+}
+
+.media .shadow.dropdown-menu[x-placement^=bottom]{
+    transform: translate(-150px, 24px) !important;
+    z-index: 9 !important;
+ }

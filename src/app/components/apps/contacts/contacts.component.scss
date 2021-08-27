@@ -1,0 +1,6 @@
+@media (min-width: 992px){
+    .main-content-app, .main-content-calEndar, .main-content-contacts {
+        display: flex;
+        height: calc(100vh - 59px);
+    }
+}

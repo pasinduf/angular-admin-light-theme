@@ -1,0 +1,38 @@
+/* Importing node modules SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import '~animate.css/animate.min.css';
+@import "~simple-datatables/dist/style.css";
+@import "~leaflet/dist/leaflet.css";
+@import "~chartist/dist/scss/chartist.scss";
+
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+@import "~intl-tel-input/build/css/intlTelInput.css";
+@import "~angular2-multiselect-dropdown/themes/default.theme.css";
+@import '~dropzone/dist/min/dropzone.min.css';
+@import '~ngx-toastr/toastr.css';
+@import '~angular-archwizard/archwizard.css';
+@import '~animate.css/animate.min.css';
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
+@import '~@swimlane/ngx-datatable/themes/dark.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+@import "~angular-calendar/scss/angular-calendar.scss";
+@import "~flatpickr/dist/flatpickr.css";
+@import '~highlight.js/scss/solarized-dark.scss';
+
+//custom scss
+@import "scss/style.scss";
+// @import "css/skins.scss";
+// @import "css/dark-style.scss";
+// @import "css/colors/default.scss";
+@import "assets/css/icon-list.css";
+// @import "css/colors/color.scss";
+
+@import "css/sidemenu/sidemenu.scss";
+

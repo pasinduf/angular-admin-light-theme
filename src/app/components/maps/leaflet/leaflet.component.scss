@@ -1,0 +1,8 @@
+::ng-deep{
+    .leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive{
+        // background: url(../../../../assets/img/marker-icon.png);
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+    }
+}
